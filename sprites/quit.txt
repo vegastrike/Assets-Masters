@@ -1,0 +1,7 @@
+Copyright (c) by pyramid & Vegastrike
+http://vegastrike.sourceforge.net/
+Licensed under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License (BY-NC-SA)
+
+quit.svg.svgz - Inkscape document
+quit.png - Portable Network Graphics image
+quit.spr - Vegastrike sprite description
