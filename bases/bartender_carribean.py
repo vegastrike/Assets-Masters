@@ -1,2 +1,0 @@
-import bartender
-bartender.Speak (bartender.GetDefaultBartenderText()+bartender.GetBartenderText('carribean')+bartender.GetBartenderText('advice')+bartender.GetBartenderText('tale')+bartender.GetBartenderText('aerawar'))
