@@ -1,11 +1,13 @@
-# Exported from Wings 3D 0.98.32a
-newmtl cube1_auv
-Ns 100.000
-d 1.00000
+# Blender3D MTL File: <memory>
+# Material Count: 1
+newmtl cube1_auv_watson.png
+Ns 98.039216
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
 illum 2
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
 map_Kd watson.png
+
 
