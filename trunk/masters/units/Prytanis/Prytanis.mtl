@@ -1,0 +1,32 @@
+newmtl hull_material
+Ns 568
+d 1
+illum 2
+Kd 0.752941 0.752941 0.752941
+Ka 0 0 0
+Ks 0.752941 0.752941 0.752941
+
+newmtl metallic_material
+Ns 568
+d 1
+illum 2
+Kd 0.501961 0.501961 0.501961
+Ka 0 0 0
+Ks 0.501961 0.501961 0.501961
+
+newmtl windshield_material
+Ns 149
+d 1
+illum 2
+Kd 1 1 1
+Ka 0 0 0
+Ks 1 1 1
+
+newmtl glow_material
+Ns 149
+d 1
+illum 2
+Kd 0 1 1
+Ka 0 10 10
+Ks 1 1 1
+
