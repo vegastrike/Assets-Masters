@@ -1,14 +1,16 @@
 # Exported from Vega Strike Unit Converter
 newmtl octotoad4_auv_tridacna.png
-Ns 100.000
-d 1.00000
+Ns 100
+Ni 1.0
+d 1.0
 illum 2
+BLEND 0
 Kd 1.00000 1.00000 1.00000
 Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_Kd tex_000.texture
-map_Ks tex_001.texture
-map_Ke tex_003.texture
-map_normal tex_004.texture
+map_0 tex_000.texture
+map_1 tex_001.texture
+map_3 tex_003.texture
+map_4 tex_004.texture
 
