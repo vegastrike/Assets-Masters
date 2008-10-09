@@ -1,0 +1,14 @@
+# Blender3D v247 OBJ File: Rlaan_Mining_Base-Mounts.obj.blend
+# www.blender3d.org
+mtllib Rlaan_Mining_Base-Mounts.mtl
+o dock_Large_Cube.005
+v 3.332686 3.505069 -4.257476
+v 3.363138 3.476220 -4.089685
+v 3.302234 3.533919 -4.089685
+v 3.794277 3.992301 -4.089685
+usemtl (null)
+s off
+f 3 1 2
+f 1 4 2
+f 2 4 3
+f 4 1 3
