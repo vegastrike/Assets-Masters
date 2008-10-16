@@ -1,0 +1,13 @@
+# Blender3D v247 OBJ File: Uln_Refinery.blend
+# www.blender3d.org
+o dock_Cube.002
+v 13.034967 0.000000 0.000000
+v 12.233358 0.000000 0.200402
+v 12.233358 -0.000000 -0.200402
+v 12.233358 3.206437 -0.000000
+usemtl (null)
+s off
+f 3 1 2
+f 1 4 2
+f 2 4 3
+f 4 1 3
