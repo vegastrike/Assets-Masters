@@ -1,0 +1,15 @@
+# Exported from Vega Strike Unit Converter
+newmtl sphere4_sep35_auv.001_rlaanstarfortress.001
+Ns 100
+Ni 1.0
+d 1.0
+illum 2
+BLEND 0
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000e+0 0.00000e+0 0.00000e+0
+map_0 tex_000.texture
+map_1 tex_001.texture
+map_3 tex_003.texture
+
