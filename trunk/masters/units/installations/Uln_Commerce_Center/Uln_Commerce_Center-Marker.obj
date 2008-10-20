@@ -1,0 +1,13 @@
+# Blender3D v247 OBJ File: Uln_Commerce_Center.blend
+# www.blender3d.org
+o Marker_dock
+v 2.582081 0.666852 -0.000000
+v 2.746314 0.666852 -0.041058
+v 2.746314 0.666852 0.041058
+v 2.746314 1.323785 -0.000000
+usemtl (null)
+s off
+f 3 1 2
+f 1 4 2
+f 2 4 3
+f 4 1 3
