@@ -1,41 +1,5 @@
 # Exported from Vega Strike Unit Converter
-newmtl red_whitelight.ani
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000 0.00000 0.00000
-BLEND 1
-map_0 redlight.ani
-
-newmtl green_whitelight.ani
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000 0.00000 0.00000
-BLEND 1
-map_0 greenlight.ani
-
-newmtl white_whitelight.ani
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000 0.00000 0.00000
-BLEND 1
-map_0 whitelight.ani
-
-newmtl octotoad4_auv_H496.png.001
+newmtl (null)
 Ns 100
 Ni 1.0
 d 1.0
@@ -45,8 +9,48 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 0
-map_0 H496.png
-map_1 highborn_H496PPL.png
-map_2 highborn_H496DMG.png
-map_3 highborn_H496GLO.png
+
+newmtl (null)
+Ns 100
+Ni 1.0
+d 1.0
+illum 2
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000 0.00000 0.00000
+BLEND 0
+
+newmtl (null)
+Ns 100
+Ni 1.0
+d 1.0
+illum 2
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000 0.00000 0.00000
+BLEND 0
+
+newmtl (null)
+Ns 100
+Ni 1.0
+d 1.0
+illum 2
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000 0.00000 0.00000
+BLEND 0
+
+newmtl (null)
+Ns 100
+Ni 1.0
+d 1.0
+illum 2
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000 0.00000 0.00000
+BLEND 0
 
