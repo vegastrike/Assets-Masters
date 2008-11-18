@@ -1,0 +1,114 @@
+Oswald_greet:
+Hello traveler.   My name is Oswald and I am offering flight assistance.   Would you like to refresh your space faring skills?  To participate in my tutorial mission, cut your engines with the BACKSPACE key, let me approach you, and stay put until I contact you again.
+
+Oswald_bye:
+Have a nice journey and come back for a space faring refresher anytime here in Cephid 17.
+
+Oswald_begin:
+Glad I can be of help.   In the first place let's have a look at your heads up display (HUD).  Please do not move your ship in order to better focus on my instructions.  
+
+Oswald_com1:
+In the upper left corner you can see the communication messages. Each communication message shows the sender, the time, and the message itself, like this one.  To scroll the messages back and forth use the Page Up and Page Down keys. Try it out now.
+
+Oswald_com2:
+Good.  Now you can send me a message by pressing the F1 key.  Usually, messages assigned to keys F1 and F2 are friendly messages which slightly increase your relation with a faction, while the other keys F3 and F4 decrease your relationship. Sometimes it can be very useful to send multiple friendly messages to improve your relation with a hostile faction, or taunt an enemy into attacking you instead of a ship you are protecting.  That's about it on the message display.
+
+Oswald_HUD1:
+Now, let's review the navigation information on your HUD. We will do theory first, then some practice.  In the lower left corner you will find your ship's shield status in blue and armor status in orange.  We will come to the text indicators later.
+
+Oswald_HUD2:
+In the middle of the bottom part you have your dashboard with the front radar on the left side and the rear radar on the right side.  The active target will display as a small cross on your radar.  Other targets will be dots with their colors representing your relation to them.  Green is friendly, red is hostile, yellow is neutral. An attacking ship is blue, targetting ship is light blue, locking ship is violet. Neutral and significant objects like planets, stations, wormholes, or suns are white.
+
+Oswald_HUD3:
+The top center part of the dashboard has four round indicators which begin flashing when the folowing events occur: 
+L means a hostile has missile lock on you
+J means you are in range of a jump point and your jump drive is ready
+S means your SPEC drive, needed for faster-than-light (FTL) travel, is activated
+E means your electronic counter measures (ECM) are active
+
+Oswald_HUD4:
+Below the round indicators are three colored bars:
+CAPACITOR shows your weapons capacitor charge
+DRIVES shows your SPEC and jump drives energy charge
+FUEL shows your capacity for in-system travel and overdrive propulsion
+
+Oswald_HUD5:
+The numbers below the bars are your current speed to the left and your set speed to the right.  Below that is the effective SPEC velocity to the left and the flight computer (FCMP) mode on the right.
+
+Oswald_target1:
+So much for theory. Let's do some practice now.  First we will do some basic navigation and targetting.
+
+Oswald_target2:
+In the lower right corner you can see the target video display unit (VDU) where you can see your current target.  Target me by repeatedly toggling the T key until you see my ship on the right VDU.  Should you pass me, you may reverse the target selection sequence by pressing the Shift T keys.
+
+Oswald_target3:
+OK. Now, orient your ship so that your targetting reticle (cross) points directly at me.   To get my ship into your visual range just turn in the direction of the white target arrow at the edge of your HUD.   When my ship is in your visual range you will notice that it is framed by a target box.  Align your targetting reticle with my ship.
+
+Oswald_nav1:
+Well done.   Now, turn your ship away from my ship and accelerate to full speed using the \ key.  
+
+Oswald_nav2:
+And now set your velocity reference to zero by pressing the BACKSPACE key and come to a complete stop.
+
+Oswald_nav3:
+You can also increment your velocity gradually with the + key. Accelerate to 100 m/s now.
+
+Oswald_nav4:
+In the same way you can reduce your velocity gradually with the - key. Deccelerate to 50 m/s.
+
+Oswald_nav5:
+Great. If you further deccelerate your velocity with the - key you can actually reverse your thrust. Deccelerate now to -20 m/s.
+
+Oswald_nav6:
+Excellent.  You have learned how to target, orient your ship, accellerate, decellerate, and bring your ship to a stop.  I'm sure this will come in handy during your future endeavors.
+
+Oswald_FTL1:
+Let's practice some faster than light (FTL) travel now.  Target the location am I sending via text message using the N or the Shift+N keys.
+
+Oswald_FTL2:
+Set your velocity to maximum with the \ key and activate the SPEC auto pilot with the A key to get there. Hang on, as this might take a while if you are close to massive objects.  You will notice that your SPEC drive indicator (S) is flashing, which indicates that it is active.
+
+Oswald_FTL3:
+During FTL travel your shields become inactive, as you can see below on your ship VDU.  You will also notice that your steering has no effect on your vessel since the auto pilot has taken over the controls.  You can always interrupt and resume the auto pilot toggling the A key. You may try that, if you wish.   
+
+Oswald_FTL4:
+In the lower left corner, just above your ship staus you will notice two indicators. SPEC shows you if your SPEC drive is enabled. AUTO tells you if auto pilot is engaged.
+
+Oswald_FTL5:
+Almost there.  The auto pilot only gives back control only some time after the SPEC auto pilot light stopped flashing.  Notice also how your shields start recharing when leaving FTL travel mode.
+
+Oswald_FTL6:
+Here we are.   You may try out manual FTL travel at this point in time.   Target planet Atlantis using your significant objects targetting keys N and Shift+N.
+
+Oswald_FTL7:
+Roger that. Turn towards the planet, set your velocity to maximum with the \ key, and enable the manual SPEC with the Shift+A key to approach the planet.  Make sure that the planet is fairly well centered in your targetting reticule.   Notice how your speed starts increasing gradually after leaving the jump point range.
+
+Oswald_FTL8:
+If your are getting too much off course, stop the SPEC drive by toggling the Shift+A key, recenter your target, and then re-enable the manual SPEC drive again with the same keys.   When you have approched Atlantis to 10000km please disable the SPEC drive by toggling the Shift+A key again and then stop your ship.
+
+Oswald_FTL9:
+All right.  You have learned how to conveniently travel within the system.  Bring your ship to full stop before crashing into the planet.
+
+Oswald_dock1:
+Now dock to the planet, go to the mission computer, and save your game.  Then get yourself a Jump Drive and an Overdrive and come back for more tutoring if you wish. To dock, turn towards the planet and press the docking clearance request key D. A green docking frame will appear.  You may still enable the SPEC drive until you close up on the planet and your velocity matches the set velocity.
+
+Oswald_dock2:
+Again, press the D key to dock. The docking distance will depend on the planet or station size that you are docking to.   The larger the object the further away you can dock.  For Atlantis the docking distance is roughly about 990 kilometers.  That concludes the navigation part of the tutorial.
+
+Oswald_attack1:
+So you want to learn how to dodge lasers, eh?  You aren't the first newbie I've had to put down, and you won't be the last!
+
+Oswald_attack2:
+That's over the border, boy!  May God have mercy upon my enemies, because I won't!
+
+Oswald_forgive:
+Enough of this!   I hope you've learned something.   Pirates won't be so forgiving.  And neither will I if you ever play tricks on me again!
+
+Oswald_resume:
+Now let's get back to business, hotshot.
+
+Oswald_cancel:
+Oops. Sorry, pal. My boss at the Cephid Safety Initiative has an emergency situation I must handle now.  I apologize. Have a safe journey. And come back for more.
+
+Oswald_where:
+Hey! Where are you heading? Come back for more anytime.  Have a good flight and don't break your hull.
