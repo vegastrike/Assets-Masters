@@ -1,0 +1,161 @@
+Aera translated speech
+by Don "Turbo" Willadsen for the VegaStrike Project
+---------------------
+
+Go on. I know those who do not threaten me.
+
+
+
+Leave now, my attention is elsewhere.
+
+
+
+Die forgotten!
+
+
+
+Another silly monkey, making monkey sounds.
+
+
+
+Prattle on, I humor you for now.
+
+
+Those who cannot tell friend from foe, have only foes!
+
+
+
+Do not tempt my trigger thumb, foolish one.
+
+
+
+Fly on, but keep going.
+
+
+
+Perhaps there is hope for your species, or at least you.
+
+
+
+I can hold no longer. You must be rent asunder.
+
+
+
+Your death will serve our Ascendancy.
+
+
+
+Your suicidal path is a disease of your entire species!
+
+
+
+I know your nature now, cease your useless lies!
+
+
+
+The time for plaintive lies is over. Die well, if you can manage even that.
+
+
+
+You shall be as trampled vines beneath my feet!
+
+
+
+You lie, foul and pitiful thing! Only death awaits you now.
+
+
+
+Your death is another boon for all Aera.
+
+
+
+Wretch! You are not worth the time it takes to shred you.
+
+
+
+Docking operation complete. You are free of the docking clamps.
+
+
+
+You are not in the docking clamps. Move into one of the green guide boxes and try to dock again.
+
+
+
+Docking operation begun; press 0 to step into our starship.
+
+
+
+You are not authorized to land here!
+
+
+
+We allow you to dock this time, ape. Bring your weapons to show us your skill.
+
+
+
+Unable to comply.
+
+
+
+Acknowledged.
+
+
+
+We scan you for illegal military items!
+
+
+
+No contraband detected, you may proceed.
+
+
+
+Contraband detected, target offender and fire at will!
+
+
+
+Your course is deviating. Maintain course!
+
+
+
+Request Clearance To Land.
+
+
+
+The lesser being is always vanquished.
+
+
+
+For this, I shall be remembered!
+
+
+
+You should have been a diplomat, you have a liar's tongue!
+
+
+
+I regret only the expense of my ammunition.
+
+
+
+My blood still beats, your forest may yet burn!
+
+
+
+A superior display, may we both be remembered...
+
+
+----------------
+Editor's notes:  The translator voice is MS Narrator set to:
+  Voice: MS Michael
+  Pitch: 4
+  Tempo: 5
+When recording is complete, separate each line into a file for editing, normalize to full volume, i.e. amplify quieter parts for give a consistent product.
+
+The aera speech is based on humpback whale songs, modified as follows:
+  tempo 350%
+  pitch -1 octave
+Rearrange the resulting sounds to suit.  Generally I used tones to represent positive feelings, growls for negative feelings, and grunts as modifiers.  Change individual parts to add variety:  change pitch in one or two spots, reverse a few parts, and add silence.  
+
+Finally, assemble the two together, and deamplify the aera speech to about 25% of the volume of the translator voice.  Do any final edits to the alien speech. For silent portions of the translator speech, put a particularly interesting part of the alien speech there.  If the translator is difficult to understand for a particular word, let the alien speech be silent at that time. 
+  
+If you can play the result with your eyes closed and understand the translator, while being aware of the alien voice behind it, you are done with that line.
