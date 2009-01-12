@@ -1,0 +1,57 @@
+Mechanist and Mechanist Citizen voice by Paolo "CLoneWolf" D'Emilio for VegaStrike Game
+
+------------------
+
+Running like clockwork.
+Keep clear, I don't brake for flesh puddles.
+Suck vaccum and die within your boiling prison of flesh!
+Keep your distance, real pilot coming through!
+My body was built to fly on days like this.
+You ever consider getting upgrades? You should.
+If you didn't have a trigger finger, it wouldn't misfire like that, now would it.
+Better a dull day than a deadly one.
+This system's not safe for fragile, little flesh puddles. Leave the real work for the real spacers.
+Tick, tock. Move along!
+There's no use running. I don't get tired.
+Even for a flesh puddle, you're disgusting!
+Die, you quivering mass of proteins!
+Just because my brain is still carbon, you think you can fool me so easily?
+I'm going to retrofit you in unspeakable ways!
+Surrender now and maybe I can save enough of you for a trial!
+Die quickly, I'm late for an oil change.
+I'd rather forgive flesh for being fallible.
+You sure picked an expensive way to kill yourself!
+Docking operation complete. You're free of the docking clamps.
+You are not in docking clamps. Move into one of the green guide boxes and try to dock again.
+Docking operation begun; press 0 to step into our starship.
+You are not authorized to land here!
+Clearance code acknowledged; move into landing pattern and dock at the white indicators.
+Unable to comply.
+Acknowledged.
+Maintain speed and course for contraband search!
+No contraband detected, you may proceed.
+Contraband detected, target offender and fire at will!
+Your course is deviating. Maintain course!
+Request Clearance To Land.
+It goes the way of all flesh!
+One less fragile fool.
+It's over. It ends now, as all flesh must.
+Mayday, attempting to eject, will go dormant awaiting pickup.
+I can't feel the ship! I can't feel my ship!
+
+------------------
+
+Audacity post-production effects:
+
+- noise removal and click removal
+- low pass filter for 15K Hz, other values default
+- high pass filter for 1000 Hz, others default
+- leveller (heaviest setting)
+- click removal
+- pitch down 2 semitones
+- C* ChorusI mono chorus/flanger (parameters 11,875 1 1.25 1 0.25 0.725)
+- click removal
+- tempo increase 30% (25% for the faster talking recorded lines)
+- stereo split, export only one channel as mono.
+
+The C* ChorusI mono chorus/flanger plugin is part of the C* Audio Plugin Suite, packaged under the name "caps" in Debian)
