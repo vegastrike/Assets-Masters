@@ -1,0 +1,57 @@
+Merchant voice by Paolo "CLoneWolf" D'Emilio for VegaStrike Game
+
+------------------
+
+Profits are up - how are your shares doing?
+You haul sixteen tons, and what do you get...
+I've come to the opinion that you're bad for business.
+I've flown a ship like yours - they ever fix the soundproofing on the head?.
+Glad to see you - friendly faces keep disappearing these days, what with the war.
+Business treating you well?
+Friendly fire! Friendly fire! What in profit's name is going on out there!
+Whatever. I get paid to haul, not chit-chat.
+Laissez faire, bud - let's just go our separate ways.
+But I have this contract to keep and miles to go before I sleep.
+Do you know what this is going to do to my insurance rates!?!
+I don't think you're very good at this whole piracy thing, are you?
+Your'e a crazy bugger - the Guild has a LONG memory.
+Words are cheap, my cargo isn't!
+I'm aiming for more than a pound of YOUR flesh!
+Bet you weren't counting on someone who could fight back, were you!
+What a waste of credits.
+Speak with your wallet, or don't speak at all!
+Quit hassling me, I feed your planets.
+Docking operation complete. You're free of the docking clamps.
+You are not in docking clamps. Move into one of the green guide boxes and try to dock again.
+Docking Operation begun; press 0 to step into airlock.
+Docking denied. Do not land here!
+Docking agreement reached: move to docking port in green indicators.
+Unable to comply, privateer.
+Affirmative, merchant moving into position.
+My mission is to search you; hold still.
+Nothing is interesting in your hold.
+Well, hello precious, I think you have something that might be better off mine!
+Your course is deviating. Maintain course!"
+Request Clearance To Land.
+And I aint gonna sell you a new one, neither.
+I'd be scared, but that was incompetent.
+Maybe your scraps will pay for repairs.
+Guess all those games were good for something.
+For the love of - this run just keeps getting worse.
+The Guild is gonna slap a contract on your ass so fast, you won't be able to sit again!
+
+------------------
+
+Audacity post-production effects:
+
+- noise removal and click removal
+- low pass filter for 15K Hz, other values default
+- high pass filter for 1000 Hz, others default
+- leveller (heaviest setting)
+- click removal
+- Low Pass Filter (One Pole) (parameter 9000Hz)
+- equalization (amradio curve)
+- click removal
+- stereo split, export merged channels as mono.
+
+The Low Pass Filter (One Pole) plugin is part of the Computer Music Toolkit, packaged under the name "cmt" in Debian)
