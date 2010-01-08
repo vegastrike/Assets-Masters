@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<audacityproject projname="headers_data" version="1.1.0" audacityversion="1.2.6" sel0="0.8131794891" sel1="14.9625025996" vpos="0" h="0.0000000000" zoom="67.6357443059" rate="22050.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="PSA_header" channel="2" linked="0" offset="0.00000000" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="149504" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00008.au' len='149504' min='-0.928466' max='1.000000' rms='0.143956'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Audio Track" channel="2" linked="0" offset="0.00000000" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="329372" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00020.au' len='329372' min='-0.738430' max='1.000000' rms='0.108292'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='2'>
+			<controlpoint t='5.204343730284' val='1.000000000000'/>
+			<controlpoint t='5.204348730284' val='1.000000000000'/>
+		</envelope>
+	</wavetrack>
+</audacityproject>
