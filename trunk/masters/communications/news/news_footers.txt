@@ -1,0 +1,25 @@
+News footers by Don "Turbo" Willadsen for Vegastrike game
+
+This sound file contains the phrase "GNN" followed by a collection of "footers" adapted from Vegastrike's news.py file.  When mixing the audio for a news story, the intent is for these footers to be added at the end of the news story, much as they are in the text news available at starports and bases.  A complete footer consists of the "GNN" phrase followed by any one footer that fit the story's character.  The news authors may, at their discretion, omit the news footer from the audio entirely.
+
+GNN -- Where the action is 
+GNN -- Interviews while you cruise 
+GNN -- We pull your head out of the sand 
+GNN -- Our bias makes you pious 
+GNN -- We're manic, yet don't panic 
+GNN -- Your death is our breath 
+GNN -- Enjoying the fruits of other's labour 
+GNN -- The news that knows 
+GNN -- The news that will bring you to your knees 
+GNN -- Your dirt is what we blurt 
+GNN -- When rumour-mongering is not enough 
+GNN -- For better or worse, we are there first
+GNN -- Our flair is your care
+GNN -- Now you know
+GNN -- Your direction for connection
+GNN -- Your source for remorse
+GNN -- We are there so you must care
+GNN -- Do you feel insignificant?
+GNN -- We report all the gaffs
+GNN -- The true story
+GNN -- Emulating journalistic integrity for 72 years
