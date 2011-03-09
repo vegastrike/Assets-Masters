@@ -1,0 +1,51 @@
+GNN "Beachhead" news report, for Vegastrike game, by Don "Turbo" Willadsen 
+I permit anyone to use this material for nonprofit purposes in support of modifications of the Vegastrike game under the principles of the Free Software Foundation
+
+Play "news" music 
+				NARRATOR	
+			The following is a GNN special report. 
+Fade out news music
+				ANCHOR
+			This is Jenny DeWilde for Galactic News Network.  
+			Fighting has broken out in Garuda between the 
+			Aera and the Andolians. We now go live to our 
+			GNN correspondent in the field, Earnest Rigor. 
+			Earnest, what's going on there?
+
+Start battlefield background noise: wind, weapons fire paired with faint explosions, faint weapons fire paired with hit sounds and louder explosions
+
+				REPORTER
+			This is Earnest Rigor for GNN. The Aera 
+			attack took everyone here completely by 
+			surprise. The system was thought to be far 
+			from the front lines and was lightly defended 
+			as a result. The Andolians have called in all 
+			available forces and requested support from 
+			the Conderate forces as well. But, as you can 
+			hear from the fighting here on the outskirts 
+			of the capitol, the Aera have already 
+			established a beachhead on the surface. 
+
+				ANCHOR
+			Earnest, how did this happen?
+
+				REPORTER
+			Well it's too early to tell, and the local 
+			government is too busy with the battle to 
+			address that now. But I am sure that this 
+			incident will raise serious questions about 
+			the state of the human defenses, how the Aera 
+			forces got through the detection network, and 
+			about the government's ability to protect 
+			colonies further from the front lines.
+
+				ANCHOR
+			Well please stay safe, and we hope to hear 
+			updates from you soon. Stay tuned for further 
+			coverage of these events.
+
+End battlefiled sounds
+
+Fade in "news" music
+				NARRATOR
+			GNN; we care.

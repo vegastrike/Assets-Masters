@@ -1,0 +1,13 @@
+# Exported from Wings 3D 0.99.02
+newmtl (null)
+Ns 100.000
+d 1.00000
+illum 1
+Kd 1.00000 1.00000 1.00000
+Ka 1.00000 1.00000 1.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000e+0 0.00000e+0 0.00000e+0
+map_Kd derivative_diffuse.texture
+map_Ks derivative_specular.texture
+map_Ke derivative_glow.texture
+#map_Normal derivative_normal.texture

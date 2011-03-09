@@ -1,0 +1,55 @@
+LIHW and LIHW Citizen voice by Paolo "CLoneWolf" D'Emilio for VegaStrike Game
+
+------------------
+
+Good day for deep-fried algae. Just like every other day.
+Whatever. No concern of mine.
+Burn and die!
+I'd honk, but it's space and all that.
+Ayup. Yes indeedy. Yuup. Nothing. Lots and lots of nothing.
+Saw a truck in a museum on old Earth once. Glad I'm not flying one of those!
+What in the 42 hells do you think you're doing, fellow?
+Always the ag planet route, never the pleasure planet stay.
+Dustups happen. Just don't get all predictive about resolutions.
+True that, friend, true that!
+I worked my ass off for this ship! Now I'm gonna have to work yours over!
+What are you? Some kind of father-raping PRE-vert?
+You're dancing right into your grave!
+What, you think I'm some monkey-loving Dgn or something? I know chicken-hockey when I hear it!
+I'm going to rip you a new one they can fly a Clydesdale through!
+Lookie, lookie, one dead cookie!
+Oh, just shut up and die!
+No way silver-tongue. You might as well be selling land on Jupiter.
+[plays 'Dueling Banjos']
+Docking operation complete. You're free of the docking clamps.
+You are not in docking clamps. Move into one of the green guide boxes and try to dock again.
+Docking operation begun; press 0 to step into our starship.
+You are not authorized to land here!
+Clearance code acknowledged; move into landing pattern and dock at the white indicators.
+Unable to comply.
+Acknowledged.
+Maintain speed and course for contraband search!
+No contraband detected, you may proceed.
+Contraband detected, target offender and fire at will!
+Your course is deviating. Maintain course!
+Request Clearance To Land.
+My complements to the Mistress!
+And stay dead!
+You dead yet?
+It's all gone sideways, Momma!
+Son of a [garbled]
+
+------------------
+
+Audacity post-production effects:
+
+- noise removal and click removal
+- low pass filter for 15K Hz, other values default
+- high pass filter for 1000 Hz, others default
+- leveller (heaviest setting)
+- click removal
+- low pass filter for 15K Hz, other values default
+- high pass filter for 1000 Hz, others default
+- leveller (heaviest setting)
+- click removal
+- stereo split, export merged channels as mono.
