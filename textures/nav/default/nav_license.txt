@@ -1,4 +1,0 @@
-Ehm, creative commons license.
-
-Converting from xmesh to bfxm:
-$ mesh_tool in.xmesh out.bfxm xbc

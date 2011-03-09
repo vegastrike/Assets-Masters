@@ -1,4 +1,4 @@
-<Mesh texture="nav/default/nav_button.texture" alphamap="nav/default/nav_button.texture" blend="SRCALPHA INVSRCALPHA">
+<Mesh texture="nav/default/nav_button.texture" texture3="nav/default/nav_glow.texture" alphamap="nav/default/nav_button.texture" blend="SRCALPHA INVSRCALPHA">
 <Points>
 <Point>
     <Location x="0.573362052440643" y="-0.575152695178986" z="3.15748691558838"/>
