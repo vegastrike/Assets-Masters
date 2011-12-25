@@ -45,8 +45,8 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 0
-map_0 H496.png
-map_1 highborn_H496PPL.png
-map_2 highborn_H496DMG.png
-map_3 highborn_H496GLO.png
+map_0 H496.texture
+map_1 H496PPL.texture
+map_2 H496DMG.texture
+map_3 H496GLO.texture
 
