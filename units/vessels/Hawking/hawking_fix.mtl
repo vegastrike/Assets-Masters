@@ -1,0 +1,14 @@
+# Blender MTL File: ''
+# Material Count: 1
+newmtl tex0_0_hawking.jpg
+map_Kd hawking.texture
+map_Ks hawkingPPL.texture
+map_Ke hawkingGLO.texture
+map_normal hawkingNORM.texture
+Ns 100.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+
+

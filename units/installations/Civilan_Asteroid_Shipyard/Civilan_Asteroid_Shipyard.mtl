@@ -1,29 +1,31 @@
-# Exported from Vega Strike Unit Converter
-newmtl immeuble2_immeuble2.png
-Ns 100
-Ni 1.0
-d 1.0
+# Blender MTL File: ''
+# Material Count: 2
+newmtl tex0_0_tex_010.texture
+Ns 100.0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
 illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
+map_Kd tex_010.texture
+map_Ks tex_011.texture
+map_Ke tex_013.texture
+map_normal tex_014.texture
 
-newmtl asteroid_mainaster2.png
-Ns 100
-Ni 1.0
-d 1.0
+
+newmtl tex1_0_tex_000.texture
+Ns 100.0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
 illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_010.texture
-map_1 tex_011.texture
-map_3 tex_013.texture
+map_Kd tex_000.texture
+map_Ks tex_001.texture
+map_Ke tex_003.texture
+map_normal tex_004.texture
 

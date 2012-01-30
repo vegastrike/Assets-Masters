@@ -1,71 +1,28 @@
-# Exported from Vega Strike Unit Converter
-newmtl sphere8_auv.002_tiny_shipyard.png
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
-
-newmtl sphere8_auv.002_tiny_shipyard.png
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
-
-newmtl sphere8_auv.002_tiny_shipyard.png
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
-
-newmtl sphere8_auv.002_tiny_shipyard.png
-Ns 100
-Ni 1.0
-d 1.0
-illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
-
+# Blender MTL File: ''
+# Material Count: 2
 newmtl sphere8_auv.002_Rlaan_Commerce_diffus
-Ns 100
-Ni 1.0
-d 1.0
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
 illum 2
-BLEND 0
-Kd 1.00000 1.00000 1.00000
-Ka 1.00000 1.00000 1.00000
-Ks 1.00000 1.00000 1.00000
-Ke 0.00000e+0 0.00000e+0 0.00000e+0
-map_0 tex_000.texture
-map_1 tex_001.texture
-map_3 tex_003.texture
+map_Kd tex_000.texture
+map_Ks tex_001.texture
+map_Ke tex_003.texture
+map_normal tex_004.texture
 
+
+newmtl sphere8_auv.002_tiny_shipyard.png
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd tex_000.texture
+map_Ks tex_001.texture
+map_Ke tex_003.texture
+map_normal tex_004.texture

@@ -1,4 +1,6 @@
-newmtl tex0_0
+# Blender MTL File: 'diligence.blend'
+# Material Count: 1
+newmtl tex0_0_diligence.png
 map_Kd diligence.png
 map_Ks black.png
 Ns 98.039215
