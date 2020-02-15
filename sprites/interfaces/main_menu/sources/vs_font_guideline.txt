@@ -1,0 +1,30 @@
+**Font Guideline**
+-------------------------------------
+
+light font color
+font color = #716578
+font = Zekton Free
+font size = 20
+Grow = 1
+Feather = 2
+
+background color = #000000
+font color = #483855
+glow color = #BFB8FE
+
+font = Megalomania
+font size = 72
+
+Create VS Text
+- In GIMP 2.00: create selection:
+  Layer > Text to Selection > Text to Selection
+- In GIMP 2.10: create selection:
+  Layer > Text to Path
+  Select > From Path
+- Create new layer
+- Rename layer to _glow
+- Select layer
+- Select > Grow = 2
+- Select > Feather = 6
+- Fill
+- Stack layer below font
