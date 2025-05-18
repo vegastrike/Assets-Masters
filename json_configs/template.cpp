@@ -61,7 +61,7 @@ void vega_config::Configuration::load_config(const boost::filesystem::path& conf
         }
         load_config(file_contents);
     } catch (const std::exception& e) {
-        VS_LOG(error, (boost::format("%1%: Exception loading config: '%2%'") % __FUNCTION__ % e.what));
+        VS_LOG(error, (boost::format("%1%: Exception loading config: '%2%'") % __FUNCTION__ % e.what()));
     }
 }
 
@@ -79,7 +79,7 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
 
 // JsonStruct
     } catch (std::exception const& e) {
-        VS_LOG(error, (boost::format("%1%: Exception loading config: '%2%'") % __FUNCTION__ % e.what));
+        VS_LOG(error, (boost::format("%1%: Exception loading config: '%2%'") % __FUNCTION__ % e.what()));
     }
 }
 
