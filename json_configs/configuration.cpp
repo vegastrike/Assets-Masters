@@ -112,17 +112,17 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
         const boost::json::value * controls_value_ptr = root_object.if_contains("controls");
         if (controls_value_ptr != nullptr) {
             boost::json::object controls_object = controls_value_ptr->get_object();
-        const boost::json::value * Cockpit::SkipMusicTrack_value_ptr = controls_object.if_contains("Cockpit::SkipMusicTrack");
-        if (Cockpit::SkipMusicTrack_value_ptr != nullptr) {
-            boost::json::object Cockpit::SkipMusicTrack_object = Cockpit::SkipMusicTrack_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::SkipMusicTrack_object.if_contains("key");
+        const boost::json::value * Cockpit__SkipMusicTrack_value_ptr = controls_object.if_contains("Cockpit__SkipMusicTrack");
+        if (Cockpit__SkipMusicTrack_value_ptr != nullptr) {
+            boost::json::object Cockpit__SkipMusicTrack_object = Cockpit__SkipMusicTrack_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__SkipMusicTrack_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::SkipMusicTrack.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__SkipMusicTrack.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::SkipMusicTrack_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__SkipMusicTrack_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::SkipMusicTrack.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__SkipMusicTrack.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
@@ -1296,17 +1296,17 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
         }
 
         
-        const boost::json::value * Flight::Mode::InertialToggle_value_ptr = controls_object.if_contains("Flight::Mode::InertialToggle");
-        if (Flight::Mode::InertialToggle_value_ptr != nullptr) {
-            boost::json::object Flight::Mode::InertialToggle_object = Flight::Mode::InertialToggle_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Flight::Mode::InertialToggle_object.if_contains("key");
+        const boost::json::value * Flight__Mode__InertialToggle_value_ptr = controls_object.if_contains("Flight__Mode__InertialToggle");
+        if (Flight__Mode__InertialToggle_value_ptr != nullptr) {
+            boost::json::object Flight__Mode__InertialToggle_object = Flight__Mode__InertialToggle_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Flight__Mode__InertialToggle_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Flight::Mode::InertialToggle.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Flight__Mode__InertialToggle.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Flight::Mode::InertialToggle_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Flight__Mode__InertialToggle_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Flight::Mode::InertialToggle.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Flight__Mode__InertialToggle.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
@@ -1504,193 +1504,193 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
         }
 
         
-        const boost::json::value * Cockpit::NavScreen_value_ptr = controls_object.if_contains("Cockpit::NavScreen");
-        if (Cockpit::NavScreen_value_ptr != nullptr) {
-            boost::json::object Cockpit::NavScreen_object = Cockpit::NavScreen_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::NavScreen_object.if_contains("key");
+        const boost::json::value * Cockpit__NavScreen_value_ptr = controls_object.if_contains("Cockpit__NavScreen");
+        if (Cockpit__NavScreen_value_ptr != nullptr) {
+            boost::json::object Cockpit__NavScreen_object = Cockpit__NavScreen_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__NavScreen_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::NavScreen.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__NavScreen.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::NavScreen_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__NavScreen_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::NavScreen.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__NavScreen.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::Inside_value_ptr = controls_object.if_contains("Cockpit::Inside");
-        if (Cockpit::Inside_value_ptr != nullptr) {
-            boost::json::object Cockpit::Inside_object = Cockpit::Inside_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::Inside_object.if_contains("key");
+        const boost::json::value * Cockpit__Inside_value_ptr = controls_object.if_contains("Cockpit__Inside");
+        if (Cockpit__Inside_value_ptr != nullptr) {
+            boost::json::object Cockpit__Inside_object = Cockpit__Inside_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__Inside_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::Inside.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__Inside.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::Inside_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__Inside_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::Inside.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__Inside.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::InsideLeft_value_ptr = controls_object.if_contains("Cockpit::InsideLeft");
-        if (Cockpit::InsideLeft_value_ptr != nullptr) {
-            boost::json::object Cockpit::InsideLeft_object = Cockpit::InsideLeft_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::InsideLeft_object.if_contains("key");
+        const boost::json::value * Cockpit__InsideLeft_value_ptr = controls_object.if_contains("Cockpit__InsideLeft");
+        if (Cockpit__InsideLeft_value_ptr != nullptr) {
+            boost::json::object Cockpit__InsideLeft_object = Cockpit__InsideLeft_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__InsideLeft_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::InsideLeft.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__InsideLeft.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::InsideLeft_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__InsideLeft_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::InsideLeft.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__InsideLeft.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::InsideRight_value_ptr = controls_object.if_contains("Cockpit::InsideRight");
-        if (Cockpit::InsideRight_value_ptr != nullptr) {
-            boost::json::object Cockpit::InsideRight_object = Cockpit::InsideRight_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::InsideRight_object.if_contains("key");
+        const boost::json::value * Cockpit__InsideRight_value_ptr = controls_object.if_contains("Cockpit__InsideRight");
+        if (Cockpit__InsideRight_value_ptr != nullptr) {
+            boost::json::object Cockpit__InsideRight_object = Cockpit__InsideRight_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__InsideRight_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::InsideRight.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__InsideRight.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::InsideRight_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__InsideRight_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::InsideRight.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__InsideRight.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::InsideBack_value_ptr = controls_object.if_contains("Cockpit::InsideBack");
-        if (Cockpit::InsideBack_value_ptr != nullptr) {
-            boost::json::object Cockpit::InsideBack_object = Cockpit::InsideBack_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::InsideBack_object.if_contains("key");
+        const boost::json::value * Cockpit__InsideBack_value_ptr = controls_object.if_contains("Cockpit__InsideBack");
+        if (Cockpit__InsideBack_value_ptr != nullptr) {
+            boost::json::object Cockpit__InsideBack_object = Cockpit__InsideBack_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__InsideBack_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::InsideBack.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__InsideBack.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::InsideBack_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__InsideBack_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::InsideBack.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__InsideBack.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::Behind_value_ptr = controls_object.if_contains("Cockpit::Behind");
-        if (Cockpit::Behind_value_ptr != nullptr) {
-            boost::json::object Cockpit::Behind_object = Cockpit::Behind_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::Behind_object.if_contains("key");
+        const boost::json::value * Cockpit__Behind_value_ptr = controls_object.if_contains("Cockpit__Behind");
+        if (Cockpit__Behind_value_ptr != nullptr) {
+            boost::json::object Cockpit__Behind_object = Cockpit__Behind_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__Behind_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::Behind.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__Behind.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::Behind_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__Behind_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::Behind.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__Behind.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::Pan_value_ptr = controls_object.if_contains("Cockpit::Pan");
-        if (Cockpit::Pan_value_ptr != nullptr) {
-            boost::json::object Cockpit::Pan_object = Cockpit::Pan_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::Pan_object.if_contains("key");
+        const boost::json::value * Cockpit__Pan_value_ptr = controls_object.if_contains("Cockpit__Pan");
+        if (Cockpit__Pan_value_ptr != nullptr) {
+            boost::json::object Cockpit__Pan_object = Cockpit__Pan_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__Pan_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::Pan.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__Pan.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::Pan_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__Pan_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::Pan.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__Pan.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::ViewTarget_value_ptr = controls_object.if_contains("Cockpit::ViewTarget");
-        if (Cockpit::ViewTarget_value_ptr != nullptr) {
-            boost::json::object Cockpit::ViewTarget_object = Cockpit::ViewTarget_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::ViewTarget_object.if_contains("key");
+        const boost::json::value * Cockpit__ViewTarget_value_ptr = controls_object.if_contains("Cockpit__ViewTarget");
+        if (Cockpit__ViewTarget_value_ptr != nullptr) {
+            boost::json::object Cockpit__ViewTarget_object = Cockpit__ViewTarget_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__ViewTarget_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::ViewTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__ViewTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::ViewTarget_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__ViewTarget_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::ViewTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__ViewTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::PanTarget_value_ptr = controls_object.if_contains("Cockpit::PanTarget");
-        if (Cockpit::PanTarget_value_ptr != nullptr) {
-            boost::json::object Cockpit::PanTarget_object = Cockpit::PanTarget_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::PanTarget_object.if_contains("key");
+        const boost::json::value * Cockpit__PanTarget_value_ptr = controls_object.if_contains("Cockpit__PanTarget");
+        if (Cockpit__PanTarget_value_ptr != nullptr) {
+            boost::json::object Cockpit__PanTarget_object = Cockpit__PanTarget_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__PanTarget_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::PanTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__PanTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::PanTarget_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__PanTarget_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::PanTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__PanTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::ZoomIn_value_ptr = controls_object.if_contains("Cockpit::ZoomIn");
-        if (Cockpit::ZoomIn_value_ptr != nullptr) {
-            boost::json::object Cockpit::ZoomIn_object = Cockpit::ZoomIn_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::ZoomIn_object.if_contains("key");
+        const boost::json::value * Cockpit__ZoomIn_value_ptr = controls_object.if_contains("Cockpit__ZoomIn");
+        if (Cockpit__ZoomIn_value_ptr != nullptr) {
+            boost::json::object Cockpit__ZoomIn_object = Cockpit__ZoomIn_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__ZoomIn_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::ZoomIn.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__ZoomIn.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::ZoomIn_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__ZoomIn_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::ZoomIn.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__ZoomIn.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::ZoomOut_value_ptr = controls_object.if_contains("Cockpit::ZoomOut");
-        if (Cockpit::ZoomOut_value_ptr != nullptr) {
-            boost::json::object Cockpit::ZoomOut_object = Cockpit::ZoomOut_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::ZoomOut_object.if_contains("key");
+        const boost::json::value * Cockpit__ZoomOut_value_ptr = controls_object.if_contains("Cockpit__ZoomOut");
+        if (Cockpit__ZoomOut_value_ptr != nullptr) {
+            boost::json::object Cockpit__ZoomOut_object = Cockpit__ZoomOut_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__ZoomOut_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::ZoomOut.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__ZoomOut.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::ZoomOut_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__ZoomOut_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::ZoomOut.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__ZoomOut.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::OutsideTarget_value_ptr = controls_object.if_contains("Cockpit::OutsideTarget");
-        if (Cockpit::OutsideTarget_value_ptr != nullptr) {
-            boost::json::object Cockpit::OutsideTarget_object = Cockpit::OutsideTarget_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::OutsideTarget_object.if_contains("key");
+        const boost::json::value * Cockpit__OutsideTarget_value_ptr = controls_object.if_contains("Cockpit__OutsideTarget");
+        if (Cockpit__OutsideTarget_value_ptr != nullptr) {
+            boost::json::object Cockpit__OutsideTarget_object = Cockpit__OutsideTarget_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__OutsideTarget_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::OutsideTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__OutsideTarget.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::OutsideTarget_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__OutsideTarget_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::OutsideTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__OutsideTarget.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
@@ -1852,145 +1852,145 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
         }
 
         
-        const boost::json::value * Cockpit::SwitchLVDU_value_ptr = controls_object.if_contains("Cockpit::SwitchLVDU");
-        if (Cockpit::SwitchLVDU_value_ptr != nullptr) {
-            boost::json::object Cockpit::SwitchLVDU_object = Cockpit::SwitchLVDU_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::SwitchLVDU_object.if_contains("key");
+        const boost::json::value * Cockpit__SwitchLVDU_value_ptr = controls_object.if_contains("Cockpit__SwitchLVDU");
+        if (Cockpit__SwitchLVDU_value_ptr != nullptr) {
+            boost::json::object Cockpit__SwitchLVDU_object = Cockpit__SwitchLVDU_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__SwitchLVDU_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::SwitchLVDU.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__SwitchLVDU.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::SwitchLVDU_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__SwitchLVDU_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::SwitchLVDU.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__SwitchLVDU.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::SwitchRVDU_value_ptr = controls_object.if_contains("Cockpit::SwitchRVDU");
-        if (Cockpit::SwitchRVDU_value_ptr != nullptr) {
-            boost::json::object Cockpit::SwitchRVDU_object = Cockpit::SwitchRVDU_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::SwitchRVDU_object.if_contains("key");
+        const boost::json::value * Cockpit__SwitchRVDU_value_ptr = controls_object.if_contains("Cockpit__SwitchRVDU");
+        if (Cockpit__SwitchRVDU_value_ptr != nullptr) {
+            boost::json::object Cockpit__SwitchRVDU_object = Cockpit__SwitchRVDU_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__SwitchRVDU_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::SwitchRVDU.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__SwitchRVDU.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::SwitchRVDU_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__SwitchRVDU_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::SwitchRVDU.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__SwitchRVDU.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::PitchDown_value_ptr = controls_object.if_contains("Cockpit::PitchDown");
-        if (Cockpit::PitchDown_value_ptr != nullptr) {
-            boost::json::object Cockpit::PitchDown_object = Cockpit::PitchDown_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::PitchDown_object.if_contains("key");
+        const boost::json::value * Cockpit__PitchDown_value_ptr = controls_object.if_contains("Cockpit__PitchDown");
+        if (Cockpit__PitchDown_value_ptr != nullptr) {
+            boost::json::object Cockpit__PitchDown_object = Cockpit__PitchDown_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__PitchDown_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::PitchDown.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__PitchDown.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::PitchDown_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__PitchDown_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::PitchDown.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__PitchDown.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::PitchUp_value_ptr = controls_object.if_contains("Cockpit::PitchUp");
-        if (Cockpit::PitchUp_value_ptr != nullptr) {
-            boost::json::object Cockpit::PitchUp_object = Cockpit::PitchUp_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::PitchUp_object.if_contains("key");
+        const boost::json::value * Cockpit__PitchUp_value_ptr = controls_object.if_contains("Cockpit__PitchUp");
+        if (Cockpit__PitchUp_value_ptr != nullptr) {
+            boost::json::object Cockpit__PitchUp_object = Cockpit__PitchUp_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__PitchUp_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::PitchUp.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__PitchUp.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::PitchUp_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__PitchUp_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::PitchUp.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__PitchUp.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::YawLeft_value_ptr = controls_object.if_contains("Cockpit::YawLeft");
-        if (Cockpit::YawLeft_value_ptr != nullptr) {
-            boost::json::object Cockpit::YawLeft_object = Cockpit::YawLeft_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::YawLeft_object.if_contains("key");
+        const boost::json::value * Cockpit__YawLeft_value_ptr = controls_object.if_contains("Cockpit__YawLeft");
+        if (Cockpit__YawLeft_value_ptr != nullptr) {
+            boost::json::object Cockpit__YawLeft_object = Cockpit__YawLeft_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__YawLeft_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::YawLeft.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__YawLeft.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::YawLeft_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__YawLeft_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::YawLeft.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__YawLeft.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::YawRight_value_ptr = controls_object.if_contains("Cockpit::YawRight");
-        if (Cockpit::YawRight_value_ptr != nullptr) {
-            boost::json::object Cockpit::YawRight_object = Cockpit::YawRight_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::YawRight_object.if_contains("key");
+        const boost::json::value * Cockpit__YawRight_value_ptr = controls_object.if_contains("Cockpit__YawRight");
+        if (Cockpit__YawRight_value_ptr != nullptr) {
+            boost::json::object Cockpit__YawRight_object = Cockpit__YawRight_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__YawRight_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::YawRight.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__YawRight.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::YawRight_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__YawRight_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::YawRight.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__YawRight.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::ScrollDown_value_ptr = controls_object.if_contains("Cockpit::ScrollDown");
-        if (Cockpit::ScrollDown_value_ptr != nullptr) {
-            boost::json::object Cockpit::ScrollDown_object = Cockpit::ScrollDown_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::ScrollDown_object.if_contains("key");
+        const boost::json::value * Cockpit__ScrollDown_value_ptr = controls_object.if_contains("Cockpit__ScrollDown");
+        if (Cockpit__ScrollDown_value_ptr != nullptr) {
+            boost::json::object Cockpit__ScrollDown_object = Cockpit__ScrollDown_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__ScrollDown_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::ScrollDown.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__ScrollDown.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::ScrollDown_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__ScrollDown_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::ScrollDown.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__ScrollDown.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * Cockpit::ScrollUp_value_ptr = controls_object.if_contains("Cockpit::ScrollUp");
-        if (Cockpit::ScrollUp_value_ptr != nullptr) {
-            boost::json::object Cockpit::ScrollUp_object = Cockpit::ScrollUp_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::ScrollUp_object.if_contains("key");
+        const boost::json::value * Cockpit__ScrollUp_value_ptr = controls_object.if_contains("Cockpit__ScrollUp");
+        if (Cockpit__ScrollUp_value_ptr != nullptr) {
+            boost::json::object Cockpit__ScrollUp_object = Cockpit__ScrollUp_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__ScrollUp_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::ScrollUp.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__ScrollUp.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::ScrollUp_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__ScrollUp_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::ScrollUp.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__ScrollUp.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
 
         
-        const boost::json::value * ConsoleKeys::BringConsole_value_ptr = controls_object.if_contains("ConsoleKeys::BringConsole");
-        if (ConsoleKeys::BringConsole_value_ptr != nullptr) {
-            boost::json::object ConsoleKeys::BringConsole_object = ConsoleKeys::BringConsole_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = ConsoleKeys::BringConsole_object.if_contains("key");
+        const boost::json::value * ConsoleKeys__BringConsole_value_ptr = controls_object.if_contains("ConsoleKeys__BringConsole");
+        if (ConsoleKeys__BringConsole_value_ptr != nullptr) {
+            boost::json::object ConsoleKeys__BringConsole_object = ConsoleKeys__BringConsole_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = ConsoleKeys__BringConsole_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.ConsoleKeys::BringConsole.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.ConsoleKeys__BringConsole.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = ConsoleKeys::BringConsole_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = ConsoleKeys__BringConsole_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.ConsoleKeys::BringConsole.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.ConsoleKeys__BringConsole.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }
@@ -2028,17 +2028,17 @@ void vega_config::Configuration::load_config(const std::string& json_text) {
         }
 
         
-        const boost::json::value * Cockpit::Quit_value_ptr = controls_object.if_contains("Cockpit::Quit");
-        if (Cockpit::Quit_value_ptr != nullptr) {
-            boost::json::object Cockpit::Quit_object = Cockpit::Quit_value_ptr->get_object();
-            const boost::json::value * key_value_ptr = Cockpit::Quit_object.if_contains("key");
+        const boost::json::value * Cockpit__Quit_value_ptr = controls_object.if_contains("Cockpit__Quit");
+        if (Cockpit__Quit_value_ptr != nullptr) {
+            boost::json::object Cockpit__Quit_object = Cockpit__Quit_value_ptr->get_object();
+            const boost::json::value * key_value_ptr = Cockpit__Quit_object.if_contains("key");
             if (key_value_ptr != nullptr) {
-                controls.Cockpit::Quit.key = boost::json::value_to<std::string>(*key_value_ptr);
+                controls.Cockpit__Quit.key = boost::json::value_to<std::string>(*key_value_ptr);
             }
             
-            const boost::json::value * modifier_value_ptr = Cockpit::Quit_object.if_contains("modifier");
+            const boost::json::value * modifier_value_ptr = Cockpit__Quit_object.if_contains("modifier");
             if (modifier_value_ptr != nullptr) {
-                controls.Cockpit::Quit.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
+                controls.Cockpit__Quit.modifier = boost::json::value_to<std::string>(*modifier_value_ptr);
             }
             
         }

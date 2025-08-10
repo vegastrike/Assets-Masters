@@ -61,7 +61,7 @@ namespace vega_config {
             std::string key = "S";
             std::string modifier = "none";
 
-        } Cockpit::SkipMusicTrack;
+        } Cockpit__SkipMusicTrack;
 
         struct {
             std::string key = "i";
@@ -505,7 +505,7 @@ namespace vega_config {
             std::string key = "`";
             std::string modifier = "none";
 
-        } Flight::Mode::InertialToggle;
+        } Flight__Mode__InertialToggle;
 
         struct {
             std::string key = "-";
@@ -583,73 +583,73 @@ namespace vega_config {
             std::string key = "M";
             std::string modifier = "none";
 
-        } Cockpit::NavScreen;
+        } Cockpit__NavScreen;
 
         struct {
             std::string key = "1";
             std::string modifier = "none";
 
-        } Cockpit::Inside;
+        } Cockpit__Inside;
 
         struct {
             std::string key = "2";
             std::string modifier = "none";
 
-        } Cockpit::InsideLeft;
+        } Cockpit__InsideLeft;
 
         struct {
             std::string key = "3";
             std::string modifier = "none";
 
-        } Cockpit::InsideRight;
+        } Cockpit__InsideRight;
 
         struct {
             std::string key = "4";
             std::string modifier = "none";
 
-        } Cockpit::InsideBack;
+        } Cockpit__InsideBack;
 
         struct {
             std::string key = "5";
             std::string modifier = "none";
 
-        } Cockpit::Behind;
+        } Cockpit__Behind;
 
         struct {
             std::string key = "6";
             std::string modifier = "none";
 
-        } Cockpit::Pan;
+        } Cockpit__Pan;
 
         struct {
             std::string key = "7";
             std::string modifier = "none";
 
-        } Cockpit::ViewTarget;
+        } Cockpit__ViewTarget;
 
         struct {
             std::string key = "8";
             std::string modifier = "none";
 
-        } Cockpit::PanTarget;
+        } Cockpit__PanTarget;
 
         struct {
             std::string key = "9";
             std::string modifier = "none";
 
-        } Cockpit::ZoomIn;
+        } Cockpit__ZoomIn;
 
         struct {
             std::string key = "0";
             std::string modifier = "none";
 
-        } Cockpit::ZoomOut;
+        } Cockpit__ZoomOut;
 
         struct {
             std::string key = "0";
             std::string modifier = "ctrl";
 
-        } Cockpit::OutsideTarget;
+        } Cockpit__OutsideTarget;
 
         struct {
             std::string key = "pause";
@@ -711,55 +711,55 @@ namespace vega_config {
             std::string key = "m";
             std::string modifier = "none";
 
-        } Cockpit::SwitchLVDU;
+        } Cockpit__SwitchLVDU;
 
         struct {
             std::string key = "v";
             std::string modifier = "none";
 
-        } Cockpit::SwitchRVDU;
+        } Cockpit__SwitchRVDU;
 
         struct {
             std::string key = "q";
             std::string modifier = "none";
 
-        } Cockpit::PitchDown;
+        } Cockpit__PitchDown;
 
         struct {
             std::string key = "z";
             std::string modifier = "none";
 
-        } Cockpit::PitchUp;
+        } Cockpit__PitchUp;
 
         struct {
             std::string key = "s";
             std::string modifier = "none";
 
-        } Cockpit::YawLeft;
+        } Cockpit__YawLeft;
 
         struct {
             std::string key = "f";
             std::string modifier = "none";
 
-        } Cockpit::YawRight;
+        } Cockpit__YawRight;
 
         struct {
             std::string key = "keypad-3";
             std::string modifier = "none";
 
-        } Cockpit::ScrollDown;
+        } Cockpit__ScrollDown;
 
         struct {
             std::string key = "keypad-9";
             std::string modifier = "none";
 
-        } Cockpit::ScrollUp;
+        } Cockpit__ScrollUp;
 
         struct {
             std::string key = "function-1";
             std::string modifier = "ctrl";
 
-        } ConsoleKeys::BringConsole;
+        } ConsoleKeys__BringConsole;
 
         struct {
             std::string key = "keypad-7";
@@ -777,7 +777,7 @@ namespace vega_config {
             std::string key = "esc";
             std::string modifier = "none";
 
-        } Cockpit::Quit;
+        } Cockpit__Quit;
 
         struct {
             std::string key = "f";
