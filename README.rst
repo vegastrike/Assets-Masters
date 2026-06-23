@@ -2,7 +2,7 @@
 Assets Masters
 ==============
 
-This repository contains the master artwork for the Vega Strike game *Upon the Coldest Sea*.
+This repository contains the master artwork for the game *Vega Strike: Upon the Coldest Sea*.
 
 This page describes generic requirements for art work submissions. The submission should happen 
 without compression, preferably in higher resolution than what will be used in-game to provide 
@@ -88,8 +88,8 @@ Image dimensions
 The vertical and horizontal size of the image should be a **power of two** (POT). Really, 
 non-POT (non-power-of-two) textures are troublesome, time and memory consuming, since
 otherwise they need to be scaled when loaded and it's just best to skip that step. It'd 
-be ideal if they were also power of two in *Asserts-Masters*, but that's not required, 
-but the exports to data4.x (Assets-Production?) should always be some power of 2.
+be ideal if they were also power of two in *Assets-Masters*, but that's not required, 
+but the exports *Assets-Production* should always be some power of 2.
 
 Just use POT. Love the POT. The POT is the mother, the POT is the father. Trust the POT.
 
@@ -107,7 +107,7 @@ That leaves few options for the horizontal or vertical resolution:
 transparent image.
 
 The size recommendation will depend on the image type. Please refer to the specific 
-image type requirements in the art-related development section.
+image type requirements in the `art-related development section <https://wiki.vega-strike.org/Development>`_.
 
 Keeping original high resolution image (e.g. 2048 or 4096 px) versions in stock 
 (and in this repository) helps maintaining quality and scalability as game development
@@ -140,7 +140,7 @@ of grey; simply: parts of the image have full transparency or are completely opa
 translucence varies a lot but not distinctly).
 
 Further clarification: DXT1 is used when the image has no transparent parts at all. 
-DXT1a (DXT1 with alpha channel) is used when the images alpha layer is just 1 value. 
+DXT1a (DXT1 with alpha channel) is used when the image's alpha layer is just 1 value. 
 It's either on or off. If it's off, we should remove the alpha layer from the master 
 and compress with regular DXT1. DXT3 is used if the image has an alpha layer with 
 values other than 0 and 100% but they are not close together. DXT5 takes the same 
@@ -266,8 +266,8 @@ medium to high degree of artistic quality
 - CQ - Cinematographic Quality: textures with high horizontal resolution and 
 very high degree of artistic quality
 
-Specific resolution requirements can be found on the development pages specific to 
-each image type.
+Specific resolution requirements can be found on the `development pages specific to 
+each image type <https://wiki.vega-strike.org/Development>`_.
 
 Git Repository Structure
 ------------------------
@@ -275,16 +275,16 @@ Git Repository Structure
 There are two repositories for graphics data which are linked together:
 
 - *Assets-Production* (formerly *data*) which holds the compressed/optimized dds images
-- *Asset-Masters* (formerly *masters*) which holds the original (png) hi-resolution image
+- *Assets-Masters* (formerly *masters*) which holds the original (png) hi-resolution image
 masters plus optionally the source/project files that were used to create the 
-compressed images. No other files will be kept in masters (text, data, sprite files, ...).
+compressed images. No other, unrelated files will be kept in *Assets-Masters* (text, data, sprite files, ...).
 
-Further, the following rules apply to **Asset-Masters (aka this repository)**:
+Further, the following rules apply to **Assets-Masters (aka this repository)**:
 
 - only original uncompressed images go here
 - they must be placed in the same (relative) directory as in the compressed images 
-in *data*
-- the original images must have the same name as those in *data*
+in *Assets-Production* 
+- the original images must have the same name as those in *Assets-Production*
 - Source or project files (.xcf, .blender, ....) are placed in a subdirectory of 
 the original image directory called ``sources``. For example, if the original image is 
 in ``sprites/planets/earth/earth_texture.png``, the source file should be in 
@@ -310,7 +310,7 @@ is already of exceptionally high (cinematographic) quality. If the image/texture
 that you have created meets the texture requirements, then:
 
 - Open a poll for a reasonable period of time (e.g. 1-2 weeks) and describe:
-    - which image(s)/texture(s) you'd like to replace display your candidates
+    - which image(s)/texture(s) you'd like to replace; display your candidates
     - briefly describe the method of creation and tools used
     - If you'd like to replace more than one image/texture, describe how you would 
 assign the favorites of the poll to the individual images/textures
@@ -322,7 +322,7 @@ assign the favorites of the poll to the individual images/textures
 For both, submitting **replacement of existing art** or **adding missing art** 
 (provided the new images/textures are not way off-topic):
 
-**Once there is a winer, submit a PR with the textures in this repository 
+**Once there is a winner, submit a PR with the textures in this repository 
 (not in Assets-Production)**
 
 
@@ -344,7 +344,7 @@ Thank you for your dedication to this project to the original Author of the
 former wiki page `Pyramid3d <https://github.com/pyramid3d>`_!
 
 
-Areas of Concern
+Folder Structure
 ----------------
 
 The artwork for the game is divided up into various types. Each section below covers one
