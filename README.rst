@@ -122,8 +122,11 @@ and dedication to quality.**
 Image Compression Codec
 ***********************
 
-The graphics format for the game is **dds** format, (though the file extension can 
-be either **png** (preferred as it is lossless), **jpg**, or **bmp**).
+The graphics format for the production assets of the game is the **dds** format, the
+actual file extensions used can be found in `Image Naming (Extension)`_. The source 
+images in this repository are not compressed, and should be saved as **png** (preferred 
+as it is lossless). For historical reasons you will find **jpg** and **bmp** files within 
+the repository, but they are no longer accepted for new submissions.
 
 The minimum texture that is DDS compressed is something like 64x for it to be 
 beneficial as far as speed and size are concerned. Anything smaller than that may 
@@ -159,7 +162,7 @@ need to be scaled down in the game:
 - Interface images
 - Space backgrounds
 
-While this image types require mipmaps:
+While these image types require mipmaps:
 
 - Unit textures
 - Cockpit mesh textures
@@ -171,11 +174,11 @@ In case of doubt please ask one of the developers or on the forum.
 Compression for production
 **************************
 
-Historically the maintainers used *nvcompress* tool for compressing 
+Historically the maintainers used the *nvcompress* tool for compressing 
 textures to dds format. While a few years have passed since the last update 
-of this page, the tools seems to still be around - good for us!
+of this page, the tool seems to still be around - good for us!
 
-This is the link between this reposository and the `production repository 
+This is the link between this repository and the `production repository 
 <https://github.com/vegastrike/Assets-Production>`_ which has the compressed 
 textures used in the game in a mirrored folder structure.
 
@@ -212,7 +215,7 @@ For DXT5 images with smooth transparency gradient:
 
 *Compression with Gimp dds plugin*
 
-Gimp plugin produces dds images with lower quality than that one produced by 
+Gimp plugin produces dds images with lower quality than hose produced by 
 the nvcompress tool. In addition, the plugin uses hardware compression and 
 may produce different results on different systems. Therefore, compressing 
 images with this plugin is not recommended for submission, but can be used as an
@@ -239,7 +242,8 @@ up and with the transition to DDS compressed files we have decided to move
 the extensions to codec-independent naming. The reason for having 2 different
 extensions was to help artists stick to the requirements by making them aware 
 that there is a difference between those 2 extensions. Please note that 
-extensions are coded in some cases so arbitrary interchange might break your graphics.
+extensions are hard-coded in some cases, so arbitrary interchange might break 
+the game's graphics
 
 The following generic, codec independent extensions will be used for graphic files:
 
@@ -247,10 +251,11 @@ The following generic, codec independent extensions will be used for graphic fil
 and gauges, comm animations, splash screens, ...)
 - **.texture** - for textures (unit textures, planet and sun textures, planet rings, 
 sun flares, explosions, blinking lights, warp animations, engine trails, nebulae, ...)
+- **.cube** - for cube maps (space backgrounds)
 
 The difference between .image and .texture is **only** in the *presence* of mipmaps in 
-*.texture* files and *absence* mipmaps in *.image* files. There is no relation 
-whatsoever to directories but depends only on how the graphics is being used.
+*.texture* files and *absence* of mipmaps in *.image* files. There is no relation 
+whatsoever to directories but depends only on how the graphic files are being used.
 The animation directory has subdirectories that have either 2d images or 3d textures. 
 The correct naming has to be evaluated for each new file.
 
@@ -312,8 +317,7 @@ that you have created meets the texture requirements, then:
 - Open a poll for a reasonable period of time (e.g. 1-2 weeks) and describe:
     - which image(s)/texture(s) you'd like to replace; display your candidates
     - briefly describe the method of creation and tools used
-    - If you'd like to replace more than one image/texture, describe how you would 
-assign the favorites of the poll to the individual images/textures
+    - If you'd like to replace more than one image/texture, describe how you would assign the favorites of the poll to the individual images/textures
 
 - After a set period of time
     - announce the winners
@@ -340,8 +344,7 @@ Forum:
 - `In-game graphics artifacts/errors <https://forums.vega-strike.org/viewforum.php?f=27>`_
 
 
-Thank you for your dedication to this project to the original Author of the 
-former wiki page `Pyramid3d <https://github.com/pyramid3d>`_!
+Thank you for your dedication to this project to the original Author of the  wiki page `Pyramid3d <https://github.com/pyramid3d>`_!
 
 
 Folder Structure
@@ -379,7 +382,13 @@ documentation
 
 Written documentation on the game play for user manuals.
 
-NOTE: This needs to get converted to OpenDocument.
+To create the manual from the source ``.tex`` file, use the following command:
+
+``pdflatex VSPlayersGuide.tex``
+
+Install LaTex on Ubuntu with the following command:
+
+``sudo apt-get install texlive-full``
 
 logo
 ****
