@@ -1,4 +1,27 @@
 #!/usr/bin/env bash
+#====================================
+# @file   : cibuild
+# @brief  : bash script to install the dependencies and
+#           automatically generate the assets for Assets-Production
+#           from the Assets-Masters source. To be run in CI workflow.
+#====================================
+# Copyright (C) 2026 Evert Vorster, Stephen G. Tuggy, Roy Falk,
+# Benjamen R. Meyer, SGD1953, and other vsUTCS contributors.
+#
+# This file is part of Vega Strike: Upon the Coldest Sea ("vsUTCS").
+#
+# vsUTCS is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# vsUTCS is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 
 sudo ./scripts/bootstrap
 SKIP_MANUAL=1 ./.venv/bin/python ./scripts/build
