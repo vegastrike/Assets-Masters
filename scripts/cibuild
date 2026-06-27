@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo ./scripts/bootstrap
-./.venv/bin/python ./scripts/build
+SKIP_MANUAL=1 ./.venv/bin/python ./scripts/build

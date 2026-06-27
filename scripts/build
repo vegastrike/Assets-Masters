@@ -11,10 +11,11 @@ import time
 from PIL import Image
 
 class VSPublish:
-    def __init__(self, source_path: str, output_path: str):
+    def __init__(self, source_path: str, output_path: str, skip_manual: bool):
         self.dds_type_registry = {}
         self.source_path = source_path
         self.output_path = os.path.abspath(output_path)
+        self.skip_manual = skip_manual
 
     def run(self):
         """Run the publishing process"""
@@ -38,11 +39,12 @@ class VSPublish:
         total_time += elapsed
         print(f"  process_galaxies took {elapsed:.2f} seconds")
 
-        start_time = time.time()
-        self.process_manual()
-        elapsed = time.time() - start_time
-        total_time += elapsed
-        print(f"  process_manual took {elapsed:.2f} seconds")
+        if not skip_manual:
+            start_time = time.time()
+            self.process_manual()
+            elapsed = time.time() - start_time
+            total_time += elapsed
+            print(f"  process_manual took {elapsed:.2f} seconds")
 
         print(f"Publishing finished successfully in {total_time:.2f} seconds")
 
@@ -241,6 +243,7 @@ if __name__ == "__main__":
     # 1. Check for the environment flag first
     is_release: bool = os.environ.get("IS_RELEASE", "0") == "1"
     output_directory: str = "build"
+    skip_manual: bool = os.environ.get("SKIP_MANUAL", "0") == "1"
 
     # 2. Determine target directory paths dynamically
     if is_release:
@@ -251,5 +254,5 @@ if __name__ == "__main__":
         output_directory = "build"
 
     # 3. Pass the resolved paths into your standard constructor
-    publish = VSPublish(".", output_directory)
+    publish = VSPublish(".", output_directory, skip_manual)
     publish.run()
