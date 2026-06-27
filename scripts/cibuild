@@ -11,7 +11,8 @@ import time
 from PIL import Image
 
 class VSPublish:
-    def __init__(self, source_path, output_path):
+    def __init__(self, source_path: str, output_path: str):
+        self.dds_type_registry = {}
         self.source_path = source_path
         self.output_path = os.path.abspath(output_path)
         
@@ -229,7 +230,7 @@ class VSPublish:
 
         relative_output_path = os.path.relpath(output_path, self.output_path)
 
-        if(not self.dds_type_registry.get(relative_output_path)):
+        if not self.dds_type_registry.get(relative_output_path):
             print(f"Warning: No DDS type defined for conversion. Defaulting to bc1 for {relative_output_path}.")
 
         return self.dds_type_registry.get(relative_output_path, "bc1")  # Default to bc1 if not found
@@ -238,7 +239,8 @@ if __name__ == "__main__":
     print("Starting VegaStrike publishing")
     
     # 1. Check for the environment flag first
-    is_release = os.environ.get("IS_RELEASE", "0") == "1"
+    is_release: bool = os.environ.get("IS_RELEASE", "0") == "1"
+    output_directory: str = "build"
     
     # 2. Determine target directory paths dynamically
     if is_release:
