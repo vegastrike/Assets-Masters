@@ -1,0 +1,255 @@
+#!/usr/bin/env python3
+# # /// script
+# dependencies = [
+#   "pillow>=10.4.0",
+# ]
+# ///
+
+import os
+import subprocess
+import time
+from PIL import Image
+
+class VSPublish:
+    def __init__(self, source_path: str, output_path: str):
+        self.dds_type_registry = {}
+        self.source_path = source_path
+        self.output_path = os.path.abspath(output_path)
+
+    def run(self):
+        """Run the publishing process"""
+
+        print(f"Publishing into {self.output_path} started...")
+
+        start_time = time.time()
+        self.process_sprites()
+        total_time = elapsed = time.time() - start_time
+        print(f"  process_sprites took {elapsed:.2f} seconds")
+
+        start_time = time.time()
+        self.process_textures()
+        elapsed = time.time() - start_time
+        total_time += elapsed
+        print(f"  process_textures took {elapsed:.2f} seconds")
+
+        start_time = time.time()
+        self.process_galaxies()
+        elapsed = time.time() - start_time
+        total_time += elapsed
+        print(f"  process_galaxies took {elapsed:.2f} seconds")
+
+        start_time = time.time()
+        self.process_manual()
+        elapsed = time.time() - start_time
+        total_time += elapsed
+        print(f"  process_manual took {elapsed:.2f} seconds")
+
+        print(f"Publishing finished successfully in {total_time:.2f} seconds")
+
+        print(f"Publishing finished successfully")
+
+
+    def process_sprites(self):
+        """Process sprite images"""
+        output_file_extension = ".image"  # Use .image extension for sprite images
+        sprites_dir = os.path.join(self.source_path, "sprites")
+        output_sprites_dir = os.path.join(self.output_path, "sprites")
+        os.makedirs(output_sprites_dir, exist_ok=True)
+
+        for current_dir, _, files in os.walk(sprites_dir):
+            for file in files:
+                if not current_dir.endswith(("source", "_uncommited")) and file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
+                    input_file_path = os.path.join(current_dir, file)
+                    relative_path = os.path.relpath(input_file_path, sprites_dir)
+                    output_file_path = os.path.join(output_sprites_dir, relative_path.rsplit('.', 1)[0] + output_file_extension)
+                    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+
+                    self.compress_image_file(input_file_path, output_file_path, mipmaps=False)
+
+    def process_textures(self):
+        """Process texture images"""
+        output_file_extension = ".texture"  # Use .texture extension for texture images
+        textures_dir = os.path.abspath(os.path.join(self.source_path, "textures"))
+        output_textures_dir = os.path.abspath(os.path.join(self.output_path, "textures"))
+        os.makedirs(output_textures_dir, exist_ok=True)
+
+        # walk the directories, ignore backgrounds which are handled separately
+        for current_dir, _, files in os.walk(textures_dir):
+            for file in files:
+                if not current_dir.endswith(("source", "sources", "backgrounds")) and file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
+                    input_file_path = os.path.join(current_dir, file)
+                    relative_path = os.path.relpath(input_file_path, textures_dir)
+                    output_file_path = os.path.join(output_textures_dir, relative_path.rsplit('.', 1)[0] + output_file_extension)
+                    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+
+                    self.compress_image_file(input_file_path, output_file_path, mipmaps=True)
+
+    def process_galaxies(self):
+        """Processes galaxy background cubemaps via nvassemble + nvcompress with explicit working layout rotations"""
+        bg_source_dir = os.path.join(self.source_path, "textures", "backgrounds")
+        bg_output_dir = os.path.join(self.output_path, "textures", "backgrounds")
+
+        if not os.path.exists(bg_source_dir):
+            print("  Skipping galaxies: Backgrounds directory not found.")
+            return
+
+        os.makedirs(bg_output_dir, exist_ok=True)
+
+        # Supported image extensions for the source faces
+        valid_extensions = ('.bmp', '.png', '.jpg', '.jpeg')
+
+        # Scan for unique cubemap sets based on the '_front' suffix match
+        cubemaps_found = set()
+        for file in os.listdir(bg_source_dir):
+            file_lower = file.lower()
+            if "_front" in file_lower and file_lower.endswith(valid_extensions):
+                base_name, ext = os.path.splitext(file)
+                prefix = base_name.rsplit("_front", 1)[0]
+                cubemaps_found.add((prefix, ext))
+
+        if not cubemaps_found:
+            print("  No background cubemaps found to assemble.")
+            return
+
+        print(f"  Found {len(cubemaps_found)} background cubemap set(s) to compile...")
+
+        for prefix, ext in cubemaps_found:
+            print(f"    Assembling background: '{prefix}' (Source format: {ext})")
+
+            # Absolute paths for our targeted dynamic formats
+            faces = {
+                "left":  os.path.join(bg_source_dir, f"{prefix}_left{ext}"),
+                "right": os.path.join(bg_source_dir, f"{prefix}_right{ext}"),
+                "front": os.path.join(bg_source_dir, f"{prefix}_front{ext}"),
+                "back":  os.path.join(bg_source_dir, f"{prefix}_back{ext}"),
+                "up":    os.path.join(bg_source_dir, f"{prefix}_up{ext}"),
+                "down":  os.path.join(bg_source_dir, f"{prefix}_down{ext}"),
+            }
+
+            # Safety check to verify the face grouping is complete
+            missing_faces = [name for name, path in faces.items() if not os.path.exists(path)]
+            if missing_faces:
+                print(f"    Warning: Skipping '{prefix}' due to missing faces: {missing_faces}")
+                continue
+
+            # 1. Process images and apply your exact target rotations using Pillow
+            temp_paths = {}
+            for name, src_path in faces.items():
+                temp_paths[name] = os.path.join(bg_source_dir, f"temp_{prefix}_{name}.png")
+                with Image.open(src_path) as img:
+                    if name == "up":
+                        # -rotate 90 in ImageMagick is a clockwise rotation. In Pillow, we use -90
+                        img = img.rotate(-90, expand=True)
+                    elif name == "down":
+                        # -rotate 180 remains identical
+                        img = img.rotate(180, expand=True)
+
+                    img.save(temp_paths[name], "PNG")
+
+            temp_raw_dds = os.path.join(bg_source_dir, f"temp_{prefix}_assembled.dds")
+            final_cube_output = os.path.join(bg_output_dir, f"{prefix}_light.cube")
+
+            try:
+                # 2. Stage 1: Call nvassemble matching your working file sequence
+                subprocess.run([
+                    "nvassemble", "-cube",
+                    temp_paths["left"],
+                    temp_paths["right"],
+                    temp_paths["up"],
+                    temp_paths["down"],
+                    temp_paths["front"],
+                    temp_paths["back"],
+                    "-o", temp_raw_dds
+                ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+                # 3. Stage 2: Crunch down using the target type from the registry file
+                dxt_type = self.get_dxt_type(final_cube_output)
+                subprocess.run([
+                    "nvcompress",
+                    f"-{dxt_type}",
+                    temp_raw_dds,
+                    final_cube_output
+                ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+            except subprocess.CalledProcessError as e:
+                print(f"    Error: Failed to execute background pipeline for {prefix}: {e}")
+            finally:
+                # 4. Clean up the temporary assets safely
+                if os.path.exists(temp_raw_dds):
+                    os.remove(temp_raw_dds)
+                for path in temp_paths.values():
+                    if os.path.exists(path):
+                        os.remove(path)
+
+    def process_manual(self):
+        print("Creating manual...")
+        try:
+            subprocess.run(["pdflatex", "VSPlayersGuide.tex"], check=True,
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except subprocess.CalledProcessError as e:
+            print(f"    Error: Failed to execute background pipeline for the manual: {e}")
+
+    def compress_image_file(self, input_path, output_path, mipmaps=True):
+        """Compress a single image via nvcompress to BC1-5"""
+        try:
+            dxt_type = self.get_dxt_type(output_path)
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+            print(f"  [{dxt_type.upper()}] Compressing to: {output_path}")
+
+            # Build a clean argument list dynamically without empty string placeholders
+            cmd = ["nvcompress", f"-{dxt_type}"]
+            if not mipmaps:
+                cmd.append("-nomips")
+
+            cmd.extend([input_path, output_path])
+
+            # Run without swallowing the standard error so we can catch binary complaints
+            result = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+
+            if result.returncode != 0:
+                print(f"  [ERROR] nvcompress failed for {os.path.basename(input_path)}:")
+                print(result.stderr)
+
+        except Exception as e:
+            print(f"  Error occurred while setting up compression for {input_path}: {e}")
+
+    def get_dxt_type(self, output_path):
+        """Returns DXT type from dds_type_registry"""
+
+        # Read the registry file which has been generated from Assets-Masters repository to establish an initial mapping.
+        if not hasattr(self, 'dds_type_registry'):
+            dds_type_registry_path = os.path.join(self.source_path, "scripts/dds_type_registry.json")
+            if os.path.exists(dds_type_registry_path):
+                import json
+                with open(dds_type_registry_path, 'r') as f:
+                    self.dds_type_registry = json.load(f)
+            else:
+                print(f"No registry found at {dds_type_registry_path}")
+                self.dds_type_registry = {}
+
+        relative_output_path = os.path.relpath(output_path, self.output_path)
+
+        if not self.dds_type_registry.get(relative_output_path):
+            print(f"Warning: No DDS type defined for conversion. Defaulting to bc1 for {relative_output_path}.")
+
+        return self.dds_type_registry.get(relative_output_path, "bc1")  # Default to bc1 if not found
+
+if __name__ == "__main__":
+    print("Starting VegaStrike publishing")
+
+    # 1. Check for the environment flag first
+    is_release: bool = os.environ.get("IS_RELEASE", "0") == "1"
+    output_directory: str = "build"
+
+    # 2. Determine target directory paths dynamically
+    if is_release:
+        print("--- RELEASE MODE ACTIVE (Routing to Production Assets) ---")
+        output_directory = "../Assets-Production"
+    else:
+        print("--- DEVELOPMENT BUILD (Routing to Build Folder) ---")
+        output_directory = "build"
+
+    # 3. Pass the resolved paths into your standard constructor
+    publish = VSPublish(".", output_directory)
+    publish.run()
