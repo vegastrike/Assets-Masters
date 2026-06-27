@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
+apt update
 apt install nvidia-texture-tools
 apt install texlive-full
