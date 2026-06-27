@@ -247,11 +247,9 @@ if __name__ == "__main__":
 
     # 2. Determine target directory paths dynamically
     if is_release:
-        print("--- RELEASE MODE ACTIVE (Routing to Production Assets) ---")
-        output_directory = "../Assets-Production"
+        print("--- RELEASE MODE ACTIVE ---")
     else:
-        print("--- DEVELOPMENT BUILD (Routing to Build Folder) ---")
-        output_directory = "build"
+        print("--- DEVELOPMENT BUILD ---")
 
     # 3. Pass the resolved paths into your standard constructor
     publish = VSPublish(".", output_directory, skip_manual)
