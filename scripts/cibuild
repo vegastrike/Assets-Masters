@@ -24,4 +24,5 @@
 # along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 
 sudo ./scripts/bootstrap
-SKIP_MANUAL=1 ./.venv/bin/python ./scripts/build
+source ./.venv/bin/activate
+SKIP_MANUAL=1 python ./scripts/build
