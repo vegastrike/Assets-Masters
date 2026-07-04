@@ -484,7 +484,14 @@ Image work for textures of various objects (see folder names), for the most part
 
 **galaxy backgrounds**
 
-A special case are the galaxy background images, they are in the ``.cube`` format and are used for the space backgrounds. The source images are in the ``.png`` format and need to be compressed to the ``.dds`` format using the ``nvcompress`` tool and then assembled via ``nvassemble`` for production. The easiest way to achieve this is via ``scripts/build``.
+A special case are the galaxy background images, they are in the ``.cube`` format and are used for the space backgrounds. The source images are in the ``.png`` format and need to be compressed to the ``.dds`` format using the ``nvcompress`` tool and then assembled via ``nvassemble`` for production. The easiest way to achieve this is via ``scripts/build``. In case you would like to manually assemble the cube, the proper face order is:
+
+- left
+- right
+- front
+- back
+- up (rotated 90 degrees clockwise)
+- down (rotated 180 degrees)
 
 The tool ``scripts/galaxy_viewer-py`` can be used to view the galaxy background images in the ``.cube`` format without starting the game, it allows side-by-side comparison as well to quickly compare different versions.
 
