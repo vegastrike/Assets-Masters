@@ -5,6 +5,28 @@
 #   "numpy",
 # ]
 # ///
+#====================================
+# @file   : build
+# @brief  : Python script to view galaxy maps in a side-by-side comparison mode using OpenGL and Pygame.
+# @author : Danny Gehl (SGD1953)
+#====================================
+# Copyright (C) 2026 Evert Vorster, Stephen G. Tuggy, Roy Falk,
+# Benjamen R. Meyer, SGD1953, and other vsUTCS contributors.
+#
+# This file is part of Vega Strike: Upon the Coldest Sea ("vsUTCS").
+#
+# vsUTCS is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# vsUTCS is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 
 import sys
 import os
@@ -17,7 +39,6 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 
 # CONFIGURATION
-DEFAULT_IMAGE = "../Assets-Production/textures/backgrounds/green_light.cube"
 WINDOW_SIZE = (1600, 900)  # Wider canvas to cleanly fit two viewports side-by-side
 ROTATION_SPEED = 2.0 
 
@@ -168,8 +189,9 @@ def main():
     is_dual_mode = False
 
     if len(args) == 0:
-        img1 = DEFAULT_IMAGE
-        print("You can pass one path parameter to view a sinle galaxy or two parameters to view 2 galaxies side-by-side.")
+        print("You can pass one path parameter to view a single galaxy or two parameters to view 2 galaxies side-by-side.")
+        print("python galaxy_viewer.py <path_to_first_galaxy.cube> [<path_to_second_galaxy.cube>]")
+        exit(1)
     elif len(args) == 1:
         img1 = args[0]
     else:

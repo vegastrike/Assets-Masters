@@ -428,8 +428,8 @@ logo
 
 The Vega Strike logos.
 
-meshes
-******
+meshes (3D Models)
+******************
 
 The meshes folder contains the 3D models for the game. The meshes are in the ``.bfxm`` format in production, which is a binary format used by Vega Strike. The source files for the meshes are in the ``.obj`` format, which is the Wavefront OBJ file format.
 
@@ -446,6 +446,23 @@ In case you would like to contribute improvements to the 3D models you can modif
 The images for the textures are in the ``.png`` or ``.jpg`` format and need to be compressed to the ``.dds`` format for production using the ``nvcompress`` tool, see `Compression for production`_ for more information. The textures are then referenced in the BFXM file and will be loaded by the game engine. **The image extension needs to stay the same in this case unlike for sprites and regular textures (this may change in future releases).**
 
 *Note: Not all conversion paths are supported, bfxm <-> obj has been verified and works.*
+
+Model development
+^^^^^^^^^^^^^^^^^
+
+The format for submission is currently Wavefront OBJ file format, as this is the most easily converted between manipulation (assorted modeling tools) and presentation (currently BFXM).
+
+Until such a time as a visual model editing tool is completed, conversion to a game-ready format will pass through the .xmesh format for insertion of LOD references into top level mesh(es), correction of coordinate "handedness" (if the ordering of the coordinate axes is incompatible, as appears to happen with the output of some modeling tools).
+
+See `the polygon/vertex count section<https://wiki.vega-strike.org/Development:Model_Guidelines>`_ in the Wiki for additional considerations about model complexity and viewing distance
+
+Model orientation
+"""""""""""""""""
+Before you get into it, **make sure to line your model up correctly before you begin**. For the purposes of Vega Strike, Z+ is forward and Y+ is up. The model's nose should be pointing forward along the Z+ axis (so that the Z+ axis would theoretically be visible from the cockpit). The mesh should be properly centered as well. Again:
+
+- Z+ -> Forward direction
+- Y+ -> Up direction
+- Center the model at the origin
 
 sounds
 ******
