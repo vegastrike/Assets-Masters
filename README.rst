@@ -308,7 +308,7 @@ The Selection and Vetting Process
 ---------------------------------
 
 When submitting new art, it is recommended to request feedback from the community 
-through the forum before submitting the images or textures.
+through the forum before submitting the images or textures. Before you start your work, please check the `art guidelines for the various factions_<https://wiki.vega-strike.org/Art_Guidelines>`.
 
 The following steps are only required when you are **replacing existing art** which 
 is already of exceptionally high (cinematographic) quality. If the image/texture 
@@ -350,8 +350,9 @@ Thank you for your dedication to this project to the original Author of the  wik
 Folder Structure
 ----------------
 
-The artwork for the game is divided up into various types. Each section below covers one
-type of artwork.
+The artwork for the game is divided up into various types. Each section below covers one type of artwork.
+
+All images will require compression to the dds format for production using the ``nvcompress`` tool for publication to production, see `Compression for production`_ for more information.
 
 animations
 **********
@@ -363,7 +364,37 @@ Each folder is an animated image set. A complete animation consists of:
 - A series of PNGs to perform the animation
 - An ANI text file with the order of the images for the animation.
 
-NOTE: Not all folders have an ANI file. More information is needed for that use-case.
+The name of the folder matches the name of the ANI file. The ANI file is a text file with the following format:
+
+``-10 10``
+
+``150 .01``
+
+``name0000.texture``
+
+``name0001.texture``
+
+``name0002.texture``    
+
+``name0003.texture``
+
+``...``
+
+
+The first line are coordinate offsets, in our case that means to offset the texture animation by 10 pixels around the entity's position.
+
+The second line is the number of frames and the time between frames in seconds.
+
+The frames are created by the artist and are named in a sequence with the name of the ANI file as prefix, then commited to this repository.
+
+To publish the frames to production, the following command is used per frame:
+
+``nvcompress -bc1 -nomips name0000.png name0000.texture``
+
+Some animation have transparency and need to use ``-bc3`` instead of ``-bc1``, see `Compression for production`_ for more information.
+
+
+*NOTE: Not all folders have an ANI file. More information is needed for that use-case.*
 
 cockpits
 ********
@@ -371,6 +402,8 @@ cockpits
 Various parts of the Cockpit display for different types of ships.
 Each folder represents a class of ship and contains various elements for the display
 of shields, engines, etc.
+
+See `the wiki page <https://wiki.vega-strike.org/Cockpits>`_ for more information on the cockpit file formats, the production images need to be compressed to the ``.dds`` format using the ``nvcompress`` tool, see `Compression for production`_ for more information..
 
 communications
 **************
@@ -395,10 +428,41 @@ logo
 
 The Vega Strike logos.
 
-meshes
-******
+meshes (3D Models)
+******************
 
-Mesh combinations
+The meshes folder contains the 3D models for the game. The meshes are in the ``.bfxm`` format in production, which is a binary format used by Vega Strike. The source files for the meshes are in the ``.obj`` format, which is the Wavefront OBJ file format.
+
+It is possible to convert between the two formats using the ``vega-meshtool`` command line tool. For example, to convert a BFXM file to an OBJ file, use the following command:
+
+``vega-meshtool --input laser.bfxm --output laser.obj --convert BFXM Wavefront create``
+
+This file can now be opened (or better imported) in Blender or other 3D modeling software for editing. If you want to re-render the model you will need to add proper lighting and camera settings. The template file ``units/vessels/hud_render_template.blend`` can be used for this purpose, it was specifically createdto to re-render the HUD images for the ships but could be adopted for other use cases.
+
+In case you would like to contribute improvements to the 3D models you can modify the model in Blender and then export it back to the OBJ format using Blender's built-in wavefront OBJ exporter. After that you can convert it back to BFXM format using the ``vega-meshtool`` command line tool.
+
+``vega-meshtool --input laser.obj --output laser.bfxm --convert Wavefront BFXM create``
+
+The images for the textures are in the ``.png`` or ``.jpg`` format and need to be compressed to the ``.dds`` format for production using the ``nvcompress`` tool, see `Compression for production`_ for more information. The textures are then referenced in the BFXM file and will be loaded by the game engine. **The image extension needs to stay the same in this case unlike for sprites and regular textures (this may change in future releases).**
+
+*Note: Not all conversion paths are supported, bfxm <-> obj has been verified and works.*
+
+Model development
+^^^^^^^^^^^^^^^^^
+
+The format for submission is currently Wavefront OBJ file format, as this is the most easily converted between manipulation (assorted modeling tools) and presentation (currently BFXM).
+
+Until such a time as a visual model editing tool is completed, conversion to a game-ready format will pass through the .xmesh format for insertion of LOD references into top level mesh(es), correction of coordinate "handedness" (if the ordering of the coordinate axes is incompatible, as appears to happen with the output of some modeling tools).
+
+See `the polygon/vertex count section<https://wiki.vega-strike.org/Development:Model_Guidelines>`_ in the Wiki for additional considerations about model complexity and viewing distance
+
+Model orientation
+"""""""""""""""""
+Before you get into it, **make sure to line your model up correctly before you begin**. For the purposes of Vega Strike, Z+ is forward and Y+ is up. The model's nose should be pointing forward along the Z+ axis (so that the Z+ axis would theoretically be visible from the cockpit). The mesh should be properly centered as well. Again:
+
+- Z+ -> Forward direction
+- Y+ -> Up direction
+- Center the model at the origin
 
 sounds
 ******
@@ -408,19 +472,67 @@ Various sounds for the game play.
 sprites
 *******
 
-Images work for interface display parts - Planets, common flight parts, etc.
+The sprites folder contains image work for interface display parts - bases, HUD images of planets, common flight parts, etc.
+
+The sprites should ideally be in high resolution (e.g. 2048x2048 for bases) and then compressed to the dds format for production using the ``nvcompress`` tool, see `Compression for production`_ for more information. The target extension is ``.image``.
+
+**Bases**
+
+Each base has a folder with a set of images for various views of the base, in most cases as a minimum:
+
+- the landing pad / hangar
+- the main concourse
+- the bar
+- the trade room
+- the ship dealer
+
+Those images can be improved and upgraded by artists, if you would like to create new bases or addtional rooms to existing bases please contact the developers on the forum first to discuss your ideas.
+
+The production repostory has a bases folder with python files for each base, this is where the textures are loaded and the interaction areas are defined.
+
+**HUD Images for Planets**
+
+The HUD images for planets are generated using POV-Ray and the POV-Ray scene files are in the ``sprites/sources`` folder. 
 
 textures
 ********
 
-Image work for display textures.
+Image work for textures of various objects (see folder names), for the most part they can be modified, saved and then compressed to the ``.dds`` format for production using the ``nvcompress`` tool, see `Compression for production`_ for more information.
+
+**galaxy backgrounds**
+
+A special case are the galaxy background images, they are in the ``.cube`` format and are used for the space backgrounds. The source images are in the ``.png`` format and need to be compressed to the ``.dds`` format using the ``nvcompress`` tool and then assembled via ``nvassemble`` for production. The easiest way to achieve this is via ``scripts/build``. In case you would like to manually assemble the cube, the proper face order is:
+
+- left
+- right
+- front
+- back
+- up (rotated 90 degrees clockwise)
+- down (rotated 180 degrees)
+
+The tool ``scripts/galaxy_viewer-py`` can be used to view the galaxy background images in the ``.cube`` format without starting the game, it allows side-by-side comparison as well to quickly compare different versions.
 
 units
 *****
 
-Image work for various objects. 
+The units folder contains the 3D models for the ships and other units in the game (this is not true for all units). See `meshes`_ for more information on the 3D models and their textures. Key folders are:
+
+- cargo - the 3D model of ejected cargo in space, can be picked up by the player
+- eject - the 3D model of ejected pilots in space
+- equipment - only contain "mobile battery platform"
+- factions - is this still used?
+- installations - the 3D models of the bases (planets are handled differently)
+- landscape - is this still used?
+- subunits - the 3D models of the subunits (e.g. turrets) of the ships
+- vessels - the 3D models of the ships, probably most relevant
+- weapons - the 3D models of the weapons (e.g. missiles, torpedoes, etc.), currently no source files, see `How to make a new weapon_<https://wiki.vega-strike.org/HowTo:Make_Weapons>`` for more information
+- wormhold - the 3d model of the wormhole
+
+In most cases the 3D model file (mesh) is missing and needs to be converted from the BFXM format to the OBJ format using the ``vega-meshtool`` command line tool. See `meshes`_ for more information.
 
 Converting Masters to Production
 --------------------------------
 
-TBD
+The ``scripts/build`` script can be used to convert the master images to production images. It will compress the images to the dds format using the ``nvcompress`` tool with the proper settings and assemble the galaxy background images via ``nvassemble``. The script will publish the compressed images to a build folder which can then be used to update the production repository.
+
+The ``scripts/bootstrap`` script can be used to install the required tools for the build process on Linux and MacOS.
