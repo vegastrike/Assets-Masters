@@ -1,0 +1,18 @@
+newmtl tex0_0
+map_Kd goddard_top.jpg
+map_Ks goddard_topPPL.jpg
+Ns 60.000000
+Ka 0.588235 0.588235 0.588235
+Kd 0.588235 0.588235 0.588235
+Ke 0.000000 0.000000 0.000000
+Ks 0.898039 0.898039 0.898039
+Map_Reflection 1
+newmtl tex1_0
+map_Kd goddard_bottom.jpg
+map_Ks goddard_bottomPPL.jpg
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1

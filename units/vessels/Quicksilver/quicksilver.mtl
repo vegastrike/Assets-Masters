@@ -1,0 +1,9 @@
+newmtl tex0_0
+map_Kd quicksilver.jpg
+map_Ks quicksilver_ppl.jpg
+Ns 40.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.700000 0.700000 0.700000
+Map_Reflection 1

@@ -8,4 +8,4 @@ Ka 0.520480 0.520480 0.520480
 Ks 0.513820 0.513820 0.513820
 Ke 1.00000e-3 1.00000e-3 1.00000e-3
 map_Kd cultivator.png
-
+map_Ke cultivator_glow.png
