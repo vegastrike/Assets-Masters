@@ -23,6 +23,7 @@
 # along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 import fnmatch
 import math
+from pathlib import Path
 
 import bpy
 import argparse
@@ -42,7 +43,7 @@ def setup_argparse():
                         help="List of patterns to ignore (e.g., blink* greenlight* shield*)")
     return parser.parse_args(args_list)
 
-def resize_scene_to_unit_box():
+def resize_scene_to_unit_box(scale_modifier=1.0):
     # 1. Collect all mesh objects
     objects = [obj for obj in bpy.context.scene.objects if obj.type == 'MESH']
     if not objects:
@@ -75,7 +76,7 @@ def resize_scene_to_unit_box():
     # 4. Apply transformation to all objects
     scale_factor = 1.0 / max_dim
     # correct the scale factor by 11, why? ¯\_(ツ)_/¯
-    scale_factor *= 11.0
+    scale_factor *= 11.0 * scale_modifier
     
     for obj in objects:
         # Move to origin relative to the scene center
@@ -100,6 +101,7 @@ def process_files():
             f for f in files 
             if f.endswith("_0.xmesh") and not should_ignore(f, args.ignore)
         ]
+        path = Path(root)
         
         if not xmesh_files:
             continue
@@ -124,10 +126,26 @@ def process_files():
             # Rotation is in radians. 90 degrees = pi / 2
             obj.rotation_euler[0] += math.radians(90)
 
-        resize_scene_to_unit_box()
+        scale_factors = {
+            "Charillus": .7,
+            "Derivative" : .7, 
+            "Gaozong" : .7,
+            "GTIO": .7, 
+            "Hammer": .7, 
+            "Plowshare": .7, 
+            "Ruizong": .7, 
+            "Schroedinger": .7, 
+            "Shizu": .7, 
+            "Zhuangzong": .8
+        }
+        scale_factor = scale_factors.get(path.name, 1.0)
+
+        print(f"Vessel name: {path.name} - scaling with {scale_factor}")
+        resize_scene_to_unit_box(scale_factor)
+
             
         # Setup output path
-        render_path = os.path.join(output_dir, "render.png")
+        render_path = os.path.join(output_dir, f"{path.name}-hud.png")
         bpy.context.scene.render.filepath = render_path
         
         # Render

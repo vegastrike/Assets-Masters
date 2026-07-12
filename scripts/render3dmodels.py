@@ -70,7 +70,79 @@ def resize_scene_to_unit_box():
         # Apply current location offset scaled down
         obj.location *= scale_factor
 
-def render_obj(file_path, output_path):
+def fix_normals(obj):
+    # 1. Set the object as active and selected
+    bpy.ops.object.select_all(action='DESELECT')
+    bpy.context.view_layer.objects.active = obj
+    obj.select_set(True)
+    
+    # 2. Enter Edit Mode
+    bpy.ops.object.mode_set(mode='EDIT')
+    
+    # 3. Select All
+    bpy.ops.mesh.select_all(action='SELECT')
+    
+    # 4. Recalculate Outside (Shift+N)
+    # The 'inside=False' parameter handles the "Recalculate Outside" requirement
+    bpy.ops.mesh.normals_make_consistent(inside=True)
+    
+    # 5. Exit Edit Mode
+    bpy.ops.object.mode_set(mode='OBJECT')
+
+import bpy
+
+def apply_multiplier_node(mat, target_input, raw_rgb_string):
+    """
+    Inserts a Multiply Math node with clamping between a linked texture 
+    and its Principled BSDF input slot using a raw MTL RGB factor string.
+    """
+    if not target_input or not target_input.is_linked:
+        return
+        
+    try:
+        # 1. Parse the space-separated RGB string into a list of floats
+        rgb_parts = [float(x) for x in raw_rgb_string.split()]
+        if not rgb_parts:
+            return
+            
+        # 2. Convert RGB to a single grayscale scalar factor using standard luminance
+        if len(rgb_parts) >= 3:
+            factor = (rgb_parts[0] * 0.2126) + (rgb_parts[1] * 0.7152) + (rgb_parts[2] * 0.0722)
+        else:
+            factor = rgb_parts[0]
+            
+        # Clamp the calculated factor between 0.0 and 1.0
+        factor = max(0.0, min(1.0, factor))
+        
+        # 3. Intercept the existing link
+        link = target_input.links[0]
+        image_node = link.from_node
+        from_socket = link.from_socket
+        
+        nodes = mat.node_tree.nodes
+        links = mat.node_tree.links
+        
+        # 4. Create and configure the Math node
+        math_node = nodes.new(type='ShaderNodeMath')
+        math_node.operation = 'MULTIPLY'
+        math_node.inputs[1].default_value = factor
+        math_node.use_clamp = True  # Enforces the 0.0 - 1.0 clamp boundaries
+        
+        # Position the node cleanly between the image texture and destination
+        math_node.location = (image_node.location.x + 200, image_node.location.y)
+        
+        # 5. Rewire the links
+        links.remove(link)
+        links.new(from_socket, math_node.inputs[0])
+        links.new(math_node.outputs[0], target_input)
+        
+        print(f"Applied Math(Multiply) node to '{target_input.name}' with factor {factor:.3f}")
+        
+    except (ValueError, IndexError):
+        # Gracefully skip if string conversion fails or parts are missing
+        pass
+
+def render_obj(file_path, output_path, material_map):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath="units/vessels/hud_render_template.blend")
 
@@ -95,10 +167,43 @@ def render_obj(file_path, output_path):
     #bpy.context.scene.render.engine = 'CYCLES'
     #bpy.context.scene.cycles.samples = 256
 
+
+
     # Fix normal map strength which otherwise would be 0
     for obj in bpy.context.scene.objects:
+        # if obj.type == 'MESH' and os.path.splitext(file_path)[0].lower().startswith(('admonisher', 'Plowshare','dodo', 'ancestor','areus','ariston','dostoevsky','gawain','goddard','hammer','kafka','mule','nicander','pacifier','sartre','schroedinger')):
+            # some ships have inside-out normals
+        #    fix_normals(obj)
         if obj.type == 'MESH' and obj.data.materials:
             for mat in obj.data.materials:
+
+                mat_data = material_map.get(mat.name)
+    
+                if mat_data and 'Ns' in mat_data:
+                    try:
+                        # 2. Extract the raw Ns value and convert it to a float
+                        ns_value = float(mat_data['Ns'])
+                        
+                        # 3. Apply the PBR formula: Roughness = sqrt(2 / (Ns + 2))
+                        roughness_value = (2.0 / (ns_value + 2.0)) ** 0.5
+                        
+                        # Clamp the value between 0.0 and 1.0 just to be safe
+                        roughness_value = max(0.0, min(1.0, roughness_value))
+                        
+                        # 4. Find the Principled BSDF node in this material
+                        nodes = mat.node_tree.nodes
+                        principled_node = next((n for n in nodes if n.type == 'BSDF_PRINCIPLED'), None)
+                        
+                        if principled_node:
+                            # 5. Handle Blender version differences for input slot names
+                            # Blender 4.0+ uses "Roughness", older versions might use "Roughness" or index 9
+                            if "Roughness" in principled_node.inputs:
+                                principled_node.inputs["Roughness"].default_value = roughness_value
+                        
+                    except (ValueError, ZeroDivisionError):
+                        # Handle edge cases gracefully if Ns is malformed or negative
+                        pass
+
                 if mat and mat.use_nodes and mat.node_tree:
                     # Look for the 'Normal Map' node
                     nodes = mat.node_tree.nodes
@@ -118,18 +223,34 @@ def render_obj(file_path, output_path):
                     if principled:
                         ior_input = principled.inputs.get('Specular IOR Level')
 
-                        # Trace back the connection if it exists
+                        # Update specular maps
                         if ior_input and ior_input.is_linked:
-                            # Get the node connected to the IOR Level input
                             link = ior_input.links[0]
                             image_node = link.from_node
-                            
-                            # Verify it is an image texture and set to Non-Color
+                                                            
+                            # Set color space (Non-Color is usually safer for raw spec maps)
                             if image_node.type == 'TEX_IMAGE' and image_node.image:
                                 image_node.image.colorspace_settings.name = 'Non-Color'
                                 image_node.image.update()
-                                print(f"Set {image_node.name} connected to IOR Level to Non-Color")
+                                print(f"Set '{image_node.name}' linked to Specular IOR Level to Non-Color")
+                                if mat_data and 'Ks' in mat_data:
+                                    apply_multiplier_node(mat, ior_input, mat_data['Ks'])
 
+                        emission_input = principled.inputs.get('Emission Color')
+
+                        # Update emision maps (glow)
+                        if emission_input and emission_input.is_linked:
+                            # Trace back to the node
+                            link = emission_input.links[0]
+                            image_node = link.from_node
+                            
+                            # 3. Verify it is an image texture and set to Non-Color
+                            if image_node.type == 'TEX_IMAGE' and image_node.image:
+                                image_node.image.colorspace_settings.name = 'Non-Color'
+                                image_node.image.update()
+                                print(f"Set '{image_node.name}' linked to Emission Color to Non-Color")
+                                if mat_data and 'Ke' in mat_data:
+                                    apply_multiplier_node(mat, emission_input, mat_data['Ke'])
     # Set Output
     bpy.context.scene.render.filepath = output_path
     
@@ -143,6 +264,36 @@ def render_obj(file_path, output_path):
     # Render
     bpy.ops.render.render(write_still=True)
 
+def parse_mtl(mtl_path):
+    """Parses an .mtl file into a dictionary of materials."""
+    materials = {}
+    current_mat = None
+    
+    if not os.path.exists(mtl_path):
+        return materials
+
+    with open(mtl_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+                
+            parts = line.split(maxsplit=1)
+            if not parts:
+                continue
+                
+            command = parts[0]
+            # Some properties might not have values (like Map_Reflection 1 vs just Map_Reflection)
+            value = parts[1] if len(parts) > 1 else "" 
+            
+            if command == 'newmtl':
+                current_mat = value
+                materials[current_mat] = {}
+            elif current_mat is not None:
+                # Store the property (e.g., 'map_Kd', 'Ns', 'Ks') and its raw string value
+                materials[current_mat][command] = value
+                
+    return materials
 
 def rewrite_mtl_file(src, target):
     with open(src, 'r', encoding='utf-8') as f:
@@ -236,8 +387,15 @@ if(__name__ == "__main__"):
             exclude_keywords = ['marker','shield', '-mount', 'turret', "acrotatus", "aidi", "anaxander", "catfish", "ct1000", "ct3000", "ellison", "lemma", "nietzsche", "patterson"]
             if file.endswith((".obj")) and not any(keyword in file.lower() for keyword in exclude_keywords):
                 obj_path = os.path.join(current_dir, file)
+
+                # Locate the accompanying .mtl file (assuming it shares the base name)
+                base_name = os.path.splitext(file)[0]
+                mtl_path = os.path.join(current_dir, f"{base_name}.mtl")
+                
+                # Parse it into a map
+                material_map = parse_mtl(mtl_path)
                 output_path = os.path.join(target_dir,"hud", f"{os.path.splitext(file)[0]}-hud.png")
-                render_obj(obj_path, output_path)
+                render_obj(obj_path, output_path, material_map)
 
 
 # vega-meshtool --input tri.bfxm --output tri.obj --convert BFXM Wavefront create
