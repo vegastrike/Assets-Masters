@@ -128,15 +128,16 @@ def process_files():
 
         scale_factors = {
             "Charillus": .7,
-            "Derivative" : .7, 
+            "Derivative" : .7,
+            "Franklin": .9, 
             "Gaozong" : .7,
-            "GTIO": .7, 
+            "GTIO": .6, 
             "Hammer": .7, 
             "Plowshare": .7, 
             "Ruizong": .7, 
             "Schroedinger": .7, 
             "Shizu": .7, 
-            "Zhuangzong": .8
+            "Zhuangzong": .7
         }
         scale_factor = scale_factors.get(path.name, 1.0)
 

@@ -21,7 +21,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
+import argparse
 import re
+import sys
 import bpy
 import os
 import mathutils
@@ -335,10 +337,33 @@ def my_custom_copy(src, dst):
         # For all other files (obj, png, etc.), use the standard copy
         shutil.copy2(src, dst)
 
-if(__name__ == "__main__"):
+def main():
+    # 1. Isolate arguments after '--'
+    # argv contains the full command line. We slice it to get only what follows '--'
+    argv = sys.argv
+    if "--" not in argv:
+        argv = []  # No arguments provided
+    else:
+        argv = argv[argv.index("--") + 1:]
+
+    parser = argparse.ArgumentParser(description="Process vessel obj files in directory tree and render them via blender.")
+
+    # We use nargs='+' for the exclude list to allow multiple values
+    parser.add_argument("--vessel-root", default="units/vessels", 
+                        help="Root directory for vessel data")
+    parser.add_argument("--target-dir", default="build", 
+                        help="Target directory for output")
+    parser.add_argument("--exclude", nargs='+', default=['marker','shield', '-mount', 'turret', "acrotatus", "aidi", "anaxander", "catfish", "ct1000", "ct3000", "ellison", "lemma", "nietzsche", "patterson"], 
+                        help="List of directory/file names to exclude")
+
+    args = parser.parse_args(argv)
+
+    print(f"Data drectory: {args.vessel_root}")
+    print(f"Target Dir:  {args.target_dir}")
+    print(f"Exclusions:  {args.exclude}")
     # source_dir = "./tmp/"
-    vessels_root = './units/vessels'
-    target_dir = "./build/"
+    vessels_root = args.vessel_root
+    target_dir = args.target_dir
 
     # Ensure the target directory exists
     os.makedirs(target_dir, exist_ok=True)
@@ -384,7 +409,7 @@ if(__name__ == "__main__"):
     # now render all OBJ files in the target_dir to generate HUD images
     for current_dir, _, files in os.walk(target_dir):
         for file in files:
-            exclude_keywords = ['marker','shield', '-mount', 'turret', "acrotatus", "aidi", "anaxander", "catfish", "ct1000", "ct3000", "ellison", "lemma", "nietzsche", "patterson"]
+            exclude_keywords = args.exclude
             if file.endswith((".obj")) and not any(keyword in file.lower() for keyword in exclude_keywords):
                 obj_path = os.path.join(current_dir, file)
 
@@ -397,5 +422,8 @@ if(__name__ == "__main__"):
                 output_path = os.path.join(target_dir,"hud", f"{os.path.splitext(file)[0]}-hud.png")
                 render_obj(obj_path, output_path, material_map)
 
-
+if(__name__ == "__main__"):
+    print("DEBUG: Full command line arguments received by Python:")
+    print(sys.argv)
+    sys.exit(main())
 # vega-meshtool --input tri.bfxm --output tri.obj --convert BFXM Wavefront create
