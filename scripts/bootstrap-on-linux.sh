@@ -60,7 +60,7 @@ function bootstrapOnDebian()
 
     case "$LINUX_CODENAME" in
         "trixie")
-            apt-get -qy install libnvtt-bin python3-virtualenv
+            apt-get -qy install libnvtt-bin python3-venv
             if [ ${SKIP_MANUAL} -eq 1 ]
             then
                 echo "Skipping texlive installation; SKIP_MANUAL is set"
@@ -69,7 +69,7 @@ function bootstrapOnDebian()
             fi
             ;;
         "bookworm")
-            apt-get -qy install libnvtt-bin python3-virtualenv
+            apt-get -qy install libnvtt-bin python3-venv
             if [ ${SKIP_MANUAL} -eq 1 ]
             then
                 echo "Skipping texlive installation; SKIP_MANUAL is set"
@@ -99,7 +99,7 @@ function bootstrapOnUbuntu()
 
     case "$LINUX_CODENAME" in
         "resolute"|"questing"|"plucky")
-            apt-get -qy install nvidia-texture-tools python3-virtualenv
+            apt-get -qy install nvidia-texture-tools python3-venv
             if [ ${SKIP_MANUAL} -eq 1 ]
             then
                 echo "Skipping texlive installation; SKIP_MANUAL is set"
@@ -108,7 +108,7 @@ function bootstrapOnUbuntu()
             fi
             ;;
         "noble")
-            apt-get -qy install nvidia-texture-tools python3-virtualenv
+            apt-get -qy install nvidia-texture-tools python3-venv
             if [ ${SKIP_MANUAL} -eq 1 ]
             then
                 echo "Skipping texlive installation; SKIP_MANUAL is set"
