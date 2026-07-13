@@ -25,4 +25,4 @@
 
 sudo ./scripts/bootstrap
 source ./.venv/bin/activate
-SKIP_MANUAL=1 python ./scripts/build
+python ./scripts/build

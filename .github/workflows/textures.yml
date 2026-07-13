@@ -1,0 +1,27 @@
+name: Textures
+permissions:
+  contents: read
+  pull-requests: read
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  SKIP_MANUAL: 1
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "convert_textures"
+  convert_textures:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: ./scripts/cibuild

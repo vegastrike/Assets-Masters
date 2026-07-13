@@ -24,10 +24,43 @@
 # along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 
 
-apt update
-apt install nvidia-texture-tools
-apt install texlive-games
+set -e
 
-/usr/bin/env python3 -m venv ./.venv
-source ./.venv/bin/activate
-pip install pillow>=10.4.0
+echo "------------------------------"
+echo "--- bootstrap | 2026-07-13 ---"
+echo "------------------------------"
+
+platform="$(uname | tr '[:upper:]' '[:lower:]')"
+
+case "$platform" in
+    "linux"|"linux-gnu")
+        echo "Bootstrapping on Linux..."
+        if [ -f ./scripts/bootstrap-on-linux.sh ] && [ -x ./scripts/bootstrap-on-linux.sh ]
+        then
+            ./scripts/bootstrap-on-linux.sh "$1"
+        elif [ -f ./bootstrap-on-linux.sh ] && [ -x ./bootstrap-on-linux.sh ]
+        then
+            ./bootstrap-on-linux.sh "$1"
+        else
+            echo "Error locating bootstrap-on-linux.sh"
+            exit 3
+        fi
+        ;;
+    "darwin")
+        echo "Bootstrapping on macOS X or later..."
+        if [ -f ./scripts/bootstrap-on-macOS.sh ] && [ -x ./scripts/bootstrap-on-macOS.sh ]
+        then
+            ./scripts/bootstrap-on-macOS.sh "$1"
+        elif [ -f ./bootstrap-on-macOS.sh ] && [ -x ./bootstrap-on-macOS.sh ]
+        then
+            ./bootstrap-on-macOS.sh "$1"
+        else
+            echo "Error locating bootstrap-on-macOS.sh"
+            exit 3
+        fi
+        ;;
+    *)
+        echo "Sorry, unrecognized or unsupported operating system"
+        exit 2
+        ;;
+esac
