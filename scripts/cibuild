@@ -23,6 +23,6 @@
 # You should have received a copy of the GNU General Public License
 # along with vsUTCS.  If not, see <https://www.gnu.org/licenses/>.
 
-sudo ./scripts/bootstrap
-source ./.venv/bin/activate
-SKIP_MANUAL=1 python ./scripts/build
+sudo --preserve-env='SKIP_MANUAL' ./scripts/bootstrap
+source /usr/local/src/vsUTCS/.venv/bin/activate
+python ./scripts/build
