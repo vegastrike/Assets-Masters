@@ -1,0 +1,171 @@
+{
+  "planets": {
+    "aeratrantor": {
+      "base_texture": "textures/planets/n_class.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "aridmethane": {
+      "base_texture": "textures/planets/frigid_mud.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "biodiverse": {
+      "base_texture": "textures/planets/m_class.png",
+      "specular": "textures/planets/m_class_specular.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": "textures/sol/earthcloudmaptrans.png"
+    },
+    "biodiversemethane": {
+      "base_texture": "textures/planets/red_rocky.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "biosimple": {
+      "base_texture": "textures/planets/k_class.png",
+      "specular": "textures/planets/k_class_specular.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": "textures/sol/earthcloudmaptrans.png"
+    },
+    "biosimplemethane": {
+      "base_texture": "textures/planets/toxic_disaster.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "carribean": {
+      "base_texture": "textures/planets/carribean.png",
+      "specular": "textures/planets/carribean_spec.png",
+      "atmosphere": { "enabled": true},
+      "lights": "textures/planets/carribean_light.png",
+      "material_type": "water"
+    },
+    "desert": {
+      "base_texture": "textures/planets/desert.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "dirt": {
+      "base_texture": "textures/planets/Dirt.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "earth": {
+      "base_texture": "textures/sol/earth.png",
+      "atmosphere": { "enabled": true},
+      "lights": "textures/sol/earthlights.jpg",
+      "specular": "textures/sol/earthspecular.png",
+      "clouds": "textures/sol/earthcloudmaptrans.png",
+      "material_type": "water"
+    },
+    "frozenammonia": {
+      "base_texture": "textures/planets/tundra.png",
+      "lights": null,
+      "clouds": null,
+      "material_type": "ice"
+    },
+    "gasgiant": {
+      "base_texture": "textures/planets/gas_giant.png",
+      "lights": null,
+      "clouds": null
+    },
+    "gasgiantdwarf": {
+      "base_texture": "textures/planets/gas_dwarf.png",
+      "lights": null,
+      "clouds": null
+    },
+    "gasgiantmedium": {
+      "base_texture": "textures/planets/gas_medium.png",
+      "lights": null,
+      "clouds": null
+    },
+    "jclass": {
+      "base_texture": "textures/planets/j_class.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "lava": {
+      "base_texture": "textures/planets/Lava.png",
+      "atmosphere": { "enabled": true},
+      "lights": "textures/planets/Lava_light.jpg",
+      "clouds": null
+    },
+    "mars": {
+      "base_texture": "textures/planets/mars/Mars.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": "textures/planets/mars/MarsClouds.png"
+    },
+    "molten": {
+      "base_texture": "textures/planets/molten.png",
+      "lights": null,
+      "clouds": null
+    },
+    "moon": {
+      "base_texture": "textures/sol/moon.png",
+      "lights": null,
+      "clouds": null
+    },
+    "ocean": {
+      "base_texture": "textures/planets/ocean.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": "textures/sol/earthcloudmaptrans.png",
+      "material_type": "water"
+    },
+    "oceanicammonia": {
+      "base_texture": "textures/planets/ocean_ammonia.png",
+      "specular": "textures/planets/ocean_ammonia_specular.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null,
+      "material_type": "water"
+    },
+    "overgrown": {
+      "base_texture": "textures/planets/forest.png",
+      "specular": "textures/planets/forest_specular.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": "textures/sol/earthcloudmaptrans.png"
+    },
+    "overgrownmethane": {
+      "base_texture": "textures/planets/forest_methane.png",
+      "specular": "textures/planets/forest_methane_specular.png",
+      "lights": null,
+      "clouds": "textures/sol/earthcloudmaptrans.png"
+    },
+    "rlaantrantor": {
+      "base_texture": "textures/planets/tkirsa.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "rocky": {
+      "base_texture": "textures/planets/rocky.png",
+      "atmosphere": { "enabled": true},
+      "lights": null,
+      "clouds": null
+    },
+    "snow": {
+      "base_texture": "textures/planets/Snow.png",
+      "lights": "textures/planets/Snow_light.png",
+      "clouds": null,
+      "material_type": "ice"
+    },
+    "university": {
+      "base_texture": "textures/planets/university.png",
+      "atmosphere": { "enabled": true},
+      "lights": "textures/planets/university_light.png",
+      "clouds": null,
+      "material_type": "water"
+    }
+  }
+}

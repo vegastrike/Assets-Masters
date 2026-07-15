@@ -30,6 +30,7 @@
 import os
 import subprocess
 import time
+import json
 from PIL import Image
 
 class VSPublish:
@@ -43,6 +44,14 @@ class VSPublish:
         """Run the publishing process"""
 
         print(f"Publishing into {self.output_path} started...")
+
+        # Read the registry file which has been generated from Assets-Masters repository to establish an initial mapping.
+        dds_type_registry_path = os.path.join(self.source_path, "scripts/dds_type_registry.json")
+        if os.path.exists(dds_type_registry_path):
+            with open(dds_type_registry_path, 'r') as f:
+                self.dds_type_registry = json.load(f)
+        else:
+            print(f"No registry found at {dds_type_registry_path}")
 
         start_time = time.time()
         self.process_sprites()
@@ -61,7 +70,7 @@ class VSPublish:
         total_time += elapsed
         print(f"  process_galaxies took {elapsed:.2f} seconds")
 
-        if not skip_manual:
+        if not self.skip_manual:
             start_time = time.time()
             self.process_manual()
             elapsed = time.time() - start_time
@@ -241,17 +250,6 @@ class VSPublish:
     def get_dxt_type(self, output_path):
         """Returns DXT type from dds_type_registry"""
 
-        # Read the registry file which has been generated from Assets-Masters repository to establish an initial mapping.
-        if not hasattr(self, 'dds_type_registry'):
-            dds_type_registry_path = os.path.join(self.source_path, "scripts/dds_type_registry.json")
-            if os.path.exists(dds_type_registry_path):
-                import json
-                with open(dds_type_registry_path, 'r') as f:
-                    self.dds_type_registry = json.load(f)
-            else:
-                print(f"No registry found at {dds_type_registry_path}")
-                self.dds_type_registry = {}
-
         relative_output_path = os.path.relpath(output_path, self.output_path)
 
         if not self.dds_type_registry.get(relative_output_path):
@@ -259,7 +257,7 @@ class VSPublish:
 
         return self.dds_type_registry.get(relative_output_path, "bc1")  # Default to bc1 if not found
 
-if __name__ == "__main__":
+def main():
     print("Starting VegaStrike publishing")
 
     # 1. Check for the environment flag first
@@ -276,3 +274,6 @@ if __name__ == "__main__":
     # 3. Pass the resolved paths into your standard constructor
     publish = VSPublish(".", output_directory, skip_manual)
     publish.run()
+
+if __name__ == "__main__":
+    main()
