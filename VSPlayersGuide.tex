@@ -6,9 +6,17 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage[margin=1in]{geometry}
+\usepackage{tikz}
 
 % Creates a neat little button frame with slight padding around the key letter
-\newcommand{\key}[1]{\framebox{\vphantom{M}\footnotesize\bfseries #1}}
+%\newcommand{\key}[1]{\framebox{\vphantom{M}\footnotesize\bfseries #1}}
+\newcommand{\key}[1]{%
+  \tikz[baseline=(key.base)]{
+    \node[draw=gray!50, fill=gray!5, rounded corners=2pt, inner sep=2pt, minimum height=1.5ex] (key) {\footnotesize\sffamily\bfseries #1};
+  }%
+}
+\newcommand{\docRevision}{1.5}
+\newcommand{\vsVersion}{0.10.0}
 
 \begin{document}
 
@@ -28,11 +36,15 @@
     \vspace{1.5cm}
     
     % --- Version & Revision Section ---
-    {\Large \bfseries Revision 1.3 \par}
+    {\Large \bfseries Revision \docRevision \par}
     \vspace{0.8em}
-    {\large Current for Vega Strike Version 0.10.0 \par}
+    {\large Current for Vega Strike Version \vsVersion \par}
     
     \vfill
+
+    \noindent
+    \includegraphics[width=\textwidth]{documentation/llama_space2.jpg} 
+
     \vfill
 \end{titlepage}
 
@@ -280,13 +292,16 @@ User patience
 \section{ What is Vega Strike?}
 
 
-\paragraph{Vega Strike is both a game (universe), and a game engine}
+\subsection{Vega Strike is both a game (universe), and a game engine}
 
 Vega Strike is an OpenSource 3d Space Simulator. Work continues on both the Vega Strike game engine and a Vega Strike 
-Universe game data set. Both engine and the Vega Strike: Upon The Coldest Sea universe are in a playable state 
+Universe game data set. Both engine and the Vega Strike: Upon The Coldest Sea (VS:UtCS) universe are in a playable state 
 (hence a \textit{Player's Guide} and not just a development document), but still under development. Each release 
-serves as a beta for both engine and data. The Vega Strike engine serves as the foundation for the Privateer Gemini 
-Gold, Privateer Remake, Vega Trek, and Pi Armada projects, whose websites are linked in the appendix of this manual. 
+serves as a beta for both engine and data. The Vega Strike engine serves as the foundation for the \textit{Privateer Gemini 
+Gold}, \textit{Privateer Remake}, \textit{Vega Trek}, and \textit{Pi Armada} projects, whose websites are linked in the appendix of this manual. 
+
+This manual focuses on VS:UtCS, but some sections may apply to the other game data sets being developed independently. Please see their web sites for any applicable manuals.
+
 The project goal is, at version 1.0, is to be a generic space simulator. Currently developed features include: 
 
 \begin{itemize}
@@ -297,7 +312,7 @@ The project goal is, at version 1.0, is to be a generic space simulator. Current
 \end{itemize}
 
 
-\paragraph{Vega Strike is Free (as in liberated) Software}
+\subsection{Vega Strike is Free (as in liberated) Software}
 
 Vega Strike is an \textit{Open Source Software} project under the GNU license (with dual-licensed GNU/Creative Commons artwork). We believe that, even in the realm of computer games, it is important that people have access to codebases that will let them imagine, create, and expand on their own terms, not those of some restrictive proprietary license. 
 
@@ -306,7 +321,7 @@ Vega Strike is an \textit{Open Source Software} project under the GNU license (w
 \end{itemize}
 
 
-\paragraph{The Game: Vega Strike: Upon the Coldest Sea}
+\subsection{The Game: Vega Strike: Upon the Coldest Sea}
 
 Vega Strike: \textit{Upon the Coldest Sea} places the player in the role of Deucalion, in a mostly sandbox setting featuring Elite-like game mechanics.
 
@@ -318,11 +333,15 @@ As you play, you will see that several species and numerous political entities a
 \end{itemize}
 
 
-\paragraph{Developer Contributions}
+\subsection{Developer Contributions}
 
-Would you like to contribute to Vegastrike and become a developer? Great! Just sign up for the developer mailing list (our apologies if it's a bit on the dry side, the deluge of spam really gunked things up for a while and recovery has not been swift, with many developer communications moving to alternate channels) and send us an email about youself, noting your skills (or which ones you'd like to develop by working with us ;-) ) and what you would like to do. Or, go to the forums and developer blog and poke around until you find someone working on something that interests you and contact the people working on that aspect of the project directly. YOU DO NOT HAVE TO BE A CODER! We have a profound need for people to do many other things as well -- documentation, web maintenance, fiction development, artwork etc. Believe us -- we'd kill for people with good cat-herding skills even if their skillset doesn't include anything technical (Scatter-brained academic code-developers attempting to remote manage busy artists, artisans, and even each other doesn't politely lend itself to the smoothest operation one can imagine). If you would like to help, or would like to find out more about the project first, then go to our forum and ask any questions you might have, what you can do, what needs to be done, etc. 
+Would you like to contribute to Vegastrike and become a developer? Great! Go to the forums and developer blog or join the Gitter room and poke around until you find someone working on something that interests you and contact the people working on that aspect of the project directly.
 
-\subsection{Introduction}
+\textbf{YOU DO NOT HAVE TO BE A CODER!}
+
+We have a profound need for people to do many other things as well -- documentation, web maintenance, fiction development, artwork etc. Believe us -- we'd kill for people with good cat-herding skills even if their skillset doesn't include anything technical (Scatter-brained academic code-developers attempting to remote manage busy artists, artisans, and even each other doesn't politely lend itself to the smoothest operation one can imagine). If you would like to help, or would like to find out more about the project first, then go to our forum and ask any questions you might have, what you can do, what needs to be done, etc. 
+
+\section{Introduction}
 
 WELCOME to \textit{Vega Strike}, a 3D OpenGL space-flight simulator developed for multi-platform play. 
 
@@ -332,11 +351,16 @@ Vega Strike features a trading economy, allowing your character to operate as a 
 
 If you tire of making money on milk runs, or just want to try something different, then there are other paths to success. Vega Strike features a mission generator, providing multiple missions to the experienced (and not so experienced) pilots. Engage in bounty hunts, patrols, battles and escort missions. Feel like traveling? Explore the dynamic universe and see the farthest reaches of known space. Want a walk on the wild side? You could always turn pirate! Just be prepared for the consequences. 
 
-Your ship just not doing the job you want it to? Vega Strike gives you the ability to purchase from a wide variety of ships capable of doing different jobs. Want to haul cargo? Fight battles? There's a ship for you. Your ship is fully customizable, so if you've got the credit, outfit your craft with the right tools for the job at hand. 
+\vspace{1em}
+\noindent
+\begin{tabular}{@{} p{0.3\textwidth} @{\hspace{0.02\textwidth}} p{0.68\textwidth} @{}}
+    \raisebox{-\height}{\includegraphics[width=0.3\textwidth]{documentation/trophes_du_libre.png}} & 
+    Your ship just not doing the job you want it to? Vega Strike gives you the ability to purchase from a wide variety of ships capable of doing different jobs. Want to haul cargo? Fight battles? There's a ship for you. Your ship is fully customizable, so if you've got the credit, outfit your craft with the right tools for the job at hand. 
 
-Have a chat to the bartender or view the news broadcasts to find out what's going on in the universe. While you're there, talk to the fixers, they may have a job that only you can do. But be warned, you never know where it may lead... 
+    Have a chat to the bartender or view the news broadcasts to find out what's going on in the universe. While you're there, talk to the fixers, they may have a job that only you can do. But be warned, you never know where it may lead... 
 
-\textbf{Winner of the Jeux (games) category of the Trophees Du Libre 2003.}
+    \textbf{Vega Strike - Winner of the Jeux (games) category of the Trophees Du Libre 2003.}\\
+\end{tabular}
 
 \section{GETTING STARTED} 
 
@@ -615,12 +639,25 @@ This selection toggles an experimental feature to include docking functionality 
 This selection toggles the appearance of certain loading screens thought to be of questionable taste.  
  
 
+\section{ Start Menu }
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{documentation/start_menu_screen.png} 
+    \caption{The Start Menu Screen}
+    \label{fig:main_menu}
+\end{figure}
 
-
-\section{ In-game menu}
-
-Foo.
+\begin{itemize}
+\item Campaign - Start a new Vega Strike game from the beginning
+\item Load game - Restore a previously saved game
+\item Multiplayer - Bring up the multiplayer connection screen (Multiplayer is disabled as of Version 0.9.0
+while other areas of the game engine receive priority attention)
+\item Introduction - Read Deucalion’s (the player character) intro monologue (Also available at start of new
+campaign)
+\item Credits - See the credits and acknowledgement page for developers and contributors to VS
+\item Quit - Exit Vega Strike
+\end{itemize}
 
 \section{ ON THE BASE }
 
@@ -729,6 +766,13 @@ Different planets or bases will have different prices and quantities for groups 
 
 
 \subsection{ Mission Computer } \label{sec:mission_computer}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{documentation/mission_screen.jpg} 
+    \caption{The MIssion Computer}
+    \label{fig:mission_computer}
+\end{figure}
 
 On arrival at a base, station or planet, most pilots want to perform a number of various functions. These functions include browsing for new missions, replacing and upgrading weapons and ships, and lastly, trading any cargo they happen to be carrying in their holds. 
 
@@ -1091,10 +1135,10 @@ Cockpit views are just that: from your pilot's seat, this is what you would see.
 
 \begin{tabular}{|p{0.4in}|p{0.3in}|p{4.1in}|} \hline 
 \textbf{ Name } & \textbf{Key } & \textbf{Description } \\ \hline 
-View Forward  & \key{F1} & This view is what appears initially in flight and is otherwise known as the cockpit view. This view contains all the necessary information and displays to fly. While in view forward, pressing \key{F1} will change from the cockpit view (with cockpit struts) to the Heads Up Display (HUD). The HUD provides the same information as the forward view but removes the cockpit surround. Press the key once more to return to cockpit view.  \\ \hline 
-View Left  & \key{F2} & This view is looking through the cockpit plasglass over your left shoulder.  \\ \hline 
-View Right  & \key{F3} & This view is looking through the cockpit plasglass over your right shoulder.  \\ \hline 
-View Reverse  & \key{F4} & As a pilot cannot look back through the ship, this view represents a camera mounted and looking to the rear of the ship.  \\ \hline 
+View Forward  & \key{1} & This view is what appears initially in flight and is otherwise known as the cockpit view. This view contains all the necessary information and displays to fly.  \\ \hline 
+View Left  & \key{2} & This view is looking through the cockpit plasglass over your left shoulder.  \\ \hline 
+View Right  & \key{3} & This view is looking through the cockpit plasglass over your right shoulder.  \\ \hline 
+View Reverse  & \key{4} & As a pilot cannot look back through the ship, this view represents a camera mounted and looking to the rear of the ship.  \\ \hline 
 \end{tabular}
 
 
@@ -1105,9 +1149,12 @@ A camera view is best described as a single viewpoint or eye located in one posi
 
 \begin{tabular}{|p{0.6in}|p{0.4in}|p{3.9in}|} \hline 
 \textbf{ Name } & \textbf{Key } & \textbf{Description } \\ \hline 
-Chasecam Panning Camera  & \textbf{[F5] [F6] } & This view seats a camera behind and above your ship's engines, looking forward. This position is static no matter the ship's movements. Best imagined as having a second ship tailing your current ship, with you in that second cockpit. This view allows you to examine all markings and detail on your ship. This view positions a camera at a single point in space, facing your ship. You may rotate the camera about your ship using the panning keys.  \\ \hline 
-Target Camera Target Panning Camera  & \textbf{[F7] [F8] } & This view places the camera at a location looking past your ship towards your current target. This view positions a camera at a single point in space, facing your target. You may rotate the camera about your target using the panning keys.  \\ \hline 
-Zoom View In Zoom View Out  & \textbf{[F11] [F12] } & While in one of the camera views, this function will move the viewpoint towards the object viewed. While in one of the camera views, this function will move the viewpoint towards the object viewed.  \\ \hline 
+Chasecam & \key{5} & This view seats a camera behind and above your ship's engines, looking forward. This camera stays behind and above your ship's engines looking forward, no matter the ship's movements. This view allows you to examine all markings and detail on your ship.  \\ \hline 
+Panning Camera & \key{6} & Best imagined as having a second ship tailing your current ship, with you in that second cockpit. This view positions a camera at a single point in space, facing your ship. This camera does not move when your ship yaws, rolls, or pitches, so it allows you to examine all markings and detail on your ship from various angles. You may rotate the camera about your ship using the panning keys.  \\ \hline 
+Target Camera & \key{7} & This view positions a camera at a single point in space, facing your target. You may rotate the camera about your target using the panning keys.  \\ \hline 
+Random Camera & \key{8} & This view positions a camera looking at either your ship or your target, from a random angle.  \\ \hline 
+Zoom View In & \key{9} & While in one of the camera views, this function will move the viewpoint towards the object viewed.  \\ \hline 
+Zoom View Out & \key{0} & While in one of the camera views, this function will move the viewpoint away from the object viewed.  \\ \hline 
 \end{tabular}
 
 
