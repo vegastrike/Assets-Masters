@@ -2,7 +2,7 @@
 
 The source file is menu-main.xcf which has all the layers.
 
-**Before you start, make sure you have teh Zekton font installed!**
+**Before you start, make sure you have the Zekton font installed!**
 
 Now you can make your changes to the main menu and export into the parent folder.
 
