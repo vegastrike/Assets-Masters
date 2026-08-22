@@ -1,26 +1,27 @@
 newmtl tex0_0
-map_Kd tex_010.texture
-map_Ks tex_011.texture
-map_Ke tex_013.texture
-map_normal tex_014.texture
+map_Kd details.png
+map_Ks details_spec.png
+map_Ke details_glow.png
 Ns 100.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
 Ke 0.000000 0.000000 0.000000
 Ks 1.000000 1.000000 1.000000
 newmtl tex1_0
-map_Kd tex_020.texture
-map_Ks tex_021.texture
-map_Ke tex_023.texture
+map_Kd MK32BATTLESHIP-diffuse.png
+map_Ks MK32BATTLESHIP-spec.png
+map_Ke MK32BATTLESHIP-luma.png
+map_Normal MK32BATTLESHIP-normal.png
 Ns 100.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
 Ke 0.000000 0.000000 0.000000
 Ks 1.000000 1.000000 1.000000
 newmtl tex2_0
-map_Kd tex_020.texture
-map_Ks tex_021.texture
-map_Ke tex_023.texture
+map_Kd MK32BATTLESHIP-diffuse.png
+map_Ks MK32BATTLESHIP-spec.png
+map_Ke MK32BATTLESHIP-luma.png
+map_Normal MK32BATTLESHIP-normal.png
 Ns 100.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000

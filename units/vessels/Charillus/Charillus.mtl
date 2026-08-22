@@ -1,0 +1,10 @@
+newmtl tex0_0
+map_Kd charillus.png
+map_Ks charillus_PPL.png
+map_Ka charillus_dmg.png
+map_Ke charillus_GLO.png
+Ns 100.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000

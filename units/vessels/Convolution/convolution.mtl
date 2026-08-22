@@ -1,0 +1,9 @@
+newmtl tex0_0
+map_Kd lekra.jpg
+map_Ks lekra-light.jpg
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1

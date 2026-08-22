@@ -1,0 +1,41 @@
+newmtl tex0_0
+map_Kd llama_connector.jpg
+map_Ks llama_connectorPPL.jpg
+map_Ka llama_connectorDMG.jpg
+map_Bump llama_connectorBUMP.png
+map_Normal llama_connectorNORMAL.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+newmtl tex1_0
+map_Kd llama_catamaran.jpg
+map_Ks llama_catamaranPPL.jpg
+map_Ka llama_catamaranDMG.jpg
+map_Bump llama_catamaranBUMP.png
+map_Normal llama_catamaranNORMAL.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+newmtl tex2_0
+map_Kd llama_body.jpg
+map_Ks llama_bodyPPL.jpg
+map_Ka llama_bodyDMG.jpg
+map_Bump llama_bodyBUMP.png
+map_Normal llama_bodyNORMAL.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+newmtl tex3_0
+map_Kd blink.ani
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Blend 1.0
