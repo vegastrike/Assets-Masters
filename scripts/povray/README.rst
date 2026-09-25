@@ -21,12 +21,15 @@ Required programs
     zip. The script adds the stock include directory to the search path
     automatically; set ``POV_STOCK_INC`` if it is somewhere unusual.
 
-- **ImageMagick** (the ``magick`` command) — rotates each frame to the face
-  orientation and writes DXT1 DDS with a full mip chain.
+- **ImageMagick** (the ``magick`` command) — this is the DXT1 compressor: it
+  rotates each frame to the face orientation and writes DXT1 DDS with a full
+  mip chain (``-define dds:compression=dxt1``). nvidia-texture-tools
+  (``nvcompress`` / ``nvassemble`` / ``nvddsinfo``) is **not** required, and is
+  no longer packaged on most distributions.
 
 - **Python 3** — runs ``dds_cubemap.py``, which concatenates the six face DDS
-  files into a cubemap. No tool does both DXT1 and cubemaps: ImageMagick writes
-  DXT1 but only flat 2D, and cmft writes cubemaps but cannot compress.
+  files into a cubemap. No single tool does both DXT1 and cubemaps: ImageMagick
+  writes DXT1 but only flat 2D, and cmft writes cubemaps but cannot compress.
 
 Usage
 =====
@@ -68,7 +71,8 @@ The pipeline
    This was verified against the shipped ``starfield_light.cube``: the
    assembled file is byte-size identical and each face matches within RMSE
    ~0.02.
-3. **Compress** each face to DXT1 DDS with a full mip chain (ImageMagick).
+3. **Compress** each face to DXT1 DDS with a full mip chain (ImageMagick's DDS
+   coder — this pipeline needs no nVIDIA Texture Tools).
 4. **Assemble** the six faces into a cubemap DDS (``dds_cubemap.py``).
 
 Target format

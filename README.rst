@@ -178,6 +178,11 @@ Historically the maintainers used the *nvcompress* tool for compressing
 textures to dds format. While a few years have passed since the last update 
 of this page, the tool seems to still be around - good for us!
 
+Note that nvidia-texture-tools is no longer packaged on most distributions. The
+space backgrounds do not use it: they are rendered from their POV-Ray sources and
+each face is compressed to DXT1 with ImageMagick by
+``scripts/povray/render-backgrounds.sh`` - see ``scripts/povray/README.rst``.
+
 This is the link between this repository and the `production repository 
 <https://github.com/vegastrike/Assets-Production>`_ which has the compressed 
 textures used in the game in a mirrored folder structure.
