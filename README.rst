@@ -501,14 +501,16 @@ Image work for textures of various objects (see folder names), for the most part
 
 **galaxy backgrounds**
 
-A special case are the galaxy background images, they are in the ``.cube`` format and are used for the space backgrounds. The source images are in the ``.png`` format and need to be compressed to the ``.dds`` format using the ``nvcompress`` tool and then assembled via ``nvassemble`` for production. The easiest way to achieve this is via ``scripts/build``. In case you would like to manually assemble the cube, the proper face order is:
+A special case are the galaxy background images: the engine loads one compressed ``.cube`` cubemap per background. Eight of them have their POV-Ray sources in ``textures/backgrounds/sources/`` and are rendered and assembled by ``scripts/povray/render-backgrounds.sh`` — see ``scripts/povray/README.rst`` for the required programs, the pipeline and the frame-to-face mapping. The pre-rendered faces next to the sources (``textures/backgrounds/<name>_{left,right,front,back,up,down}.{bmp,png,jpg}``) are the masters those cubemaps are built from; the remaining backgrounds have no render source in this repository.
 
-- left
-- right
-- front
-- back
-- up (rotated 90 degrees clockwise)
-- down (rotated 180 degrees)
+Rendering writes into the gitignored ``build/`` directory, never into the repository itself. The face order is the DDS cubemap order:
+
+- +X (left)
+- -X (right)
+- +Y (up, rotated 90 degrees clockwise)
+- -Y (down, rotated 180 degrees)
+- +Z (front)
+- -Z (back)
 
 The tool ``scripts/galaxy_viewer-py`` can be used to view the galaxy background images in the ``.cube`` format without starting the game, it allows side-by-side comparison as well to quickly compare different versions.
 
@@ -533,6 +535,8 @@ In most cases the 3D model file (mesh) is missing and needs to be converted from
 Converting Masters to Production
 --------------------------------
 
-The ``scripts/build`` script can be used to convert the master images to production images. It will compress the images to the dds format using the ``nvcompress`` tool with the proper settings and assemble the galaxy background images via ``nvassemble``. The script will publish the compressed images to a build folder which can then be used to update the production repository.
+The ``scripts/build`` script can be used to convert the master images to production images. It compresses the images to the dds format using the ``nvcompress`` tool (part of nvidia-texture-tools, which is no longer packaged on most distributions) and publishes them to a build folder which can then be used to update the production repository.
+
+The space backgrounds are not built by ``scripts/build``. They are rendered from their POV-Ray sources and assembled by ``scripts/povray/render-backgrounds.sh``, which needs only POV-Ray, ImageMagick and Python 3 — see ``scripts/povray/README.rst``.
 
 The ``scripts/bootstrap`` script can be used to install the required tools for the build process on Linux and MacOS.
