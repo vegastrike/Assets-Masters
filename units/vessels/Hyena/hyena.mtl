@@ -1,0 +1,11 @@
+newmtl tex0_0
+map_Kd hyena.png
+map_Ks hyena_spec.png
+map_Ke hyenaGLO.png
+map_Normal HyenaNormal.png
+Ns 60.000000
+Ka 0.300000 0.300000 0.300000
+Kd 1.000000 1.000000 1.000000
+Ke 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1

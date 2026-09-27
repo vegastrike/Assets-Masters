@@ -1,0 +1,10 @@
+newmtl tex0_0
+map_Kd seaxbane_high.png
+map_Ks seaxbanePPL_high.png
+map_Ke seaxbaneGLO_high.png
+map_Normal seaxbaneBUMP_high.png
+Ns 100.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000

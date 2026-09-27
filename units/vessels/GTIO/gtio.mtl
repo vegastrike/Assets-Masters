@@ -1,0 +1,45 @@
+newmtl tex0_0
+map_Kd gtio.jpg
+map_Ks gtio_ppl.jpg
+Ns 60.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex0_1
+map_Kd gtio.jpg
+map_Ks gtio_ppl.jpg
+Ns 60.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex0_2
+map_Kd gtio_lod.jpg
+map_Ks gtio_lod_ppl.jpg
+Ns 60.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex1_0
+map_Kd gtio.jpg
+map_Ks gtio_ppl.jpg
+Ns 60.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex2_0
+map_Kd gtio.jpg
+map_Ks gtio_ppl.jpg
+Ns 60.000000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1

@@ -1,0 +1,93 @@
+newmtl tex0_0
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex0_1
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex0_2
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex1_0
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+newmtl tex1_1
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+newmtl tex1_2
+map_Kd ancestor.png
+map_Ks ancestorPPL.png
+map_Ka ancestorDMG.png
+map_Ke ancestorGLO.png
+map_Normal ancestornormal.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+newmtl tex2_0
+map_Kd blink.ani
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Blend 1.0
+newmtl tex2_1
+map_Kd blink.ani
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Blend 1.0
+newmtl tex2_2
+map_Kd blink.ani
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Blend 1.0

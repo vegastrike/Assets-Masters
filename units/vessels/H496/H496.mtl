@@ -9,7 +9,7 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 1
-map_0 redlight.ani
+map_Kd redlight.ani
 
 newmtl green_whitelight.ani
 Ns 100
@@ -21,7 +21,7 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 1
-map_0 greenlight.ani
+map_Kd greenlight.ani
 
 newmtl white_whitelight.ani
 Ns 100
@@ -33,9 +33,9 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 1
-map_0 whitelight.ani
+map_Kd whitelight.ani
 
-newmtl octotoad4_auv_H496.png.001
+newmtl octotoad4_auv_H496
 Ns 100
 Ni 1.0
 d 1.0
@@ -45,8 +45,7 @@ Ka 1.00000 1.00000 1.00000
 Ks 1.00000 1.00000 1.00000
 Ke 0.00000 0.00000 0.00000
 BLEND 0
-map_0 H496.texture
-map_1 H496PPL.texture
-map_2 H496DMG.texture
-map_3 H496GLO.texture
-
+map_Kd H496.png
+map_Ks H496PPL.png
+map_Ke H496GLO.png
+map_Ka H496DMG.png

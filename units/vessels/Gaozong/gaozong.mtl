@@ -1,0 +1,10 @@
+newmtl tex0_0
+map_Kd GaozongDIFF.jpg
+map_Ks GaozongSPEC.jpg
+map_Ka GaozongDMG.jpg
+map_Ke GaozongGLOW.jpg
+Ns 3.400000
+Ka 1.000000 1.000000 1.000000
+Kd 0.588235 0.588235 0.588235
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000

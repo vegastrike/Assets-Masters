@@ -1,0 +1,11 @@
+newmtl tex0_0
+map_Kd dostoevsky.jpg
+map_Ks dostoevskyPPL.jpg
+map_Ka dostoevskyDMG.jpg
+map_Ke dostoevskyGLO.jpg
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
