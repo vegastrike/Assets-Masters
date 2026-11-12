@@ -1,0 +1,196 @@
+<Mesh scale="1.000000" reverse="0" forcetexture="0" sharevert="0" polygonoffset="0.000000" blend="ONE ZERO" alphatest="0.000000"  texture="Rlaancap1.png" >
+<Material power="60.000000" cullface="1" reflect="1" lighting="1" usenormals="1">
+	<Ambient Red="0.000000" Green="0.000000" Blue="0.000000" Alpha="1.000000"/>
+	<Diffuse Red="1.000000" Green="1.000000" Blue="1.000000" Alpha="1.000000"/>
+	<Emissive Red="0.000000" Green="0.000000" Blue="0.000000" Alpha="1.000000"/>
+	<Specular Red="1.000000" Green="1.000000" Blue="1.000000" Alpha="1.000000"/>
+</Material>
+<Points>
+<Point>
+	<Location x="-12.688489" y="-33.419487" z="78.732780" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="-0.903878" k="-0.427791"/>
+</Point>
+<Point>
+	<Location x="0.000995" y="-33.419487" z="78.732780" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="-0.903878" k="-0.427791"/>
+</Point>
+<Point>
+	<Location x="0.000997" y="-23.195345" z="57.130253" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="-0.880147" k="-0.474701"/>
+</Point>
+<Point>
+	<Location x="-21.824923" y="-23.195345" z="57.130253" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="-0.853909" k="-0.520423"/>
+</Point>
+<Point>
+	<Location x="0.000996" y="1.506587" z="21.017508" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="-0.555749" k="-0.831350"/>
+</Point>
+<Point>
+	<Location x="-29.027479" y="1.506587" z="21.017508" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="-0.130222" k="-0.991485"/>
+</Point>
+<Point>
+	<Location x="0.000996" y="20.679697" z="25.933992" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="0.780056" k="-0.625710"/>
+</Point>
+<Point>
+	<Location x="-29.027479" y="20.679697" z="25.933992" s="0.000000" t="0.000000"/>
+	<Normal i="-0.000000" j="0.777729" k="-0.628599"/>
+</Point>
+<Point>
+	<Location x="-21.456612" y="21.896946" z="56.561302" s="0.000000" t="0.000000"/>
+	<Normal i="0.010753" j="0.999424" k="-0.032188"/>
+</Point>
+<Point>
+	<Location x="0.000996" y="21.896946" z="75.274162" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="0.999696" k="-0.024663"/>
+</Point>
+<Point>
+	<Location x="12.690490" y="-33.419487" z="78.732780" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="-0.903878" k="-0.427791"/>
+</Point>
+<Point>
+	<Location x="21.826921" y="-23.195345" z="57.130253" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="-0.853909" k="-0.520423"/>
+</Point>
+<Point>
+	<Location x="29.029476" y="1.506587" z="21.017508" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="-0.130222" k="-0.991485"/>
+</Point>
+<Point>
+	<Location x="29.029476" y="20.679697" z="25.933992" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="0.777729" k="-0.628599"/>
+</Point>
+<Point>
+	<Location x="21.458611" y="21.896946" z="56.561302" s="0.000000" t="0.000000"/>
+	<Normal i="-0.010753" j="0.999424" k="-0.032188"/>
+</Point>
+<Point>
+	<Location x="-20.904873" y="32.335938" z="-71.162323" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+<Point>
+	<Location x="20.906868" y="32.335938" z="-71.162323" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+<Point>
+	<Location x="30.146786" y="32.335941" z="-6.212300" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+<Point>
+	<Location x="-30.144791" y="32.335941" z="-6.212300" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+<Point>
+	<Location x="-3.570777" y="32.335934" z="-143.436523" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+<Point>
+	<Location x="3.572774" y="32.335934" z="-143.436523" s="0.000000" t="0.000000"/>
+	<Normal i="0.000000" j="1.000000" k="-0.000000"/>
+</Point>
+</Points>
+<Polygons>
+	<Tri flatshade="0">
+		<Vertex point="0" s="0.473960" t="0.467528"/>
+		<Vertex point="1" s="0.504831" t="0.467528"/>
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+		<Vertex point="3" s="0.451732" t="0.493634"/>
+		<Vertex point="0" s="0.473960" t="0.467528"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="3" s="0.451732" t="0.493634"/>
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+		<Vertex point="5" s="0.434209" t="0.556707"/>
+		<Vertex point="3" s="0.451732" t="0.493634"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="5" s="0.434209" t="0.556707"/>
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+		<Vertex point="7" s="0.434209" t="0.605663"/>
+		<Vertex point="5" s="0.434209" t="0.556707"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="8" s="0.452628" t="0.608771"/>
+		<Vertex point="7" s="0.434209" t="0.605663"/>
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+		<Vertex point="9" s="0.504831" t="0.608771"/>
+		<Vertex point="8" s="0.452628" t="0.608771"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="10" s="0.535702" t="0.467528"/>
+		<Vertex point="11" s="0.557930" t="0.493634"/>
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+		<Vertex point="1" s="0.504831" t="0.467528"/>
+		<Vertex point="10" s="0.535702" t="0.467528"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="11" s="0.557930" t="0.493634"/>
+		<Vertex point="12" s="0.575452" t="0.556707"/>
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+		<Vertex point="2" s="0.504831" t="0.493634"/>
+		<Vertex point="11" s="0.557930" t="0.493634"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="12" s="0.575452" t="0.556707"/>
+		<Vertex point="13" s="0.575452" t="0.605663"/>
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+		<Vertex point="4" s="0.504831" t="0.556707"/>
+		<Vertex point="12" s="0.575452" t="0.556707"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+		<Vertex point="13" s="0.575452" t="0.605663"/>
+		<Vertex point="14" s="0.557034" t="0.608771"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="14" s="0.557034" t="0.608771"/>
+		<Vertex point="9" s="0.504831" t="0.608771"/>
+		<Vertex point="6" s="0.504831" t="0.605663"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="15" s="0.052485" t="0.304179"/>
+		<Vertex point="16" s="0.099808" t="0.304179"/>
+		<Vertex point="17" s="0.110266" t="0.377690"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="17" s="0.110266" t="0.377690"/>
+		<Vertex point="18" s="0.042027" t="0.377690"/>
+		<Vertex point="15" s="0.052485" t="0.304179"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="19" s="0.072104" t="0.222378"/>
+		<Vertex point="20" s="0.080189" t="0.222378"/>
+		<Vertex point="16" s="0.099808" t="0.304179"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="16" s="0.099808" t="0.304179"/>
+		<Vertex point="15" s="0.052485" t="0.304179"/>
+		<Vertex point="19" s="0.072104" t="0.222378"/>
+	</Tri>
+</Polygons>
+</Mesh>

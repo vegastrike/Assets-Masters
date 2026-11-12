@@ -1,0 +1,61 @@
+newmtl tex0_0
+map_Kd shundi.png
+map_Ks shundiPPL.png
+map_Ka shundiDMG.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex1_0
+map_Kd shundi.png
+map_Ks shundiPPL.png
+map_Ka shundiDMG.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex1_1
+map_Kd shundi.png
+map_Ks shundiPPL.png
+map_Ka shundiDMG.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex1_2
+map_Kd shundi.png
+map_Ks shundiPPL.png
+map_Ka shundiDMG.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex2_0
+map_Kd shundi2.png
+map_Ks shundi2PPL.png
+map_Ka shundi2DMG.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Map_Reflection 1
+newmtl tex3_0
+map_Kd shundi.png
+map_Ks shundiPPL.png
+map_Ka shundiDMG.png
+map_Ke shundiGLO.png
+Ns 60.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Blend 1.0

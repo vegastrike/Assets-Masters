@@ -1,6 +1,6 @@
 # Blender3D v247 OBJ File: knight.blend
 # www.blender3d.org
-mtllib KNIGHT.mtl
+mtllib knight.mtl
 o cube1_cube1_auv_cube1
 v 0.435680 -0.928736 -1.766066
 v 0.435680 -0.523128 1.754776

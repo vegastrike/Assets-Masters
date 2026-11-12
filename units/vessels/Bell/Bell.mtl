@@ -9,8 +9,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd tex_000.texture
-map_Ka tex_001.texture
-map_Ke tex_003.texture
-map_normal tex_004.texture
+map_Kd Bell-diffuse.png
+map_Ka Bell-spec.png
+map_Ke Bell-GLOW.png
+map_Bump Bell-bump.png
 

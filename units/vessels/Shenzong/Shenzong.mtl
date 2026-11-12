@@ -3,10 +3,14 @@
 newmtl 9_-_Default
 Ka  0.5882353187 0.5882353187 0.5882353187
 Kd  0.5882353187 0.5882353187 0.5882353187
+Ke  0.000000 0.000000 0.000000
 Ks  0.8999999762 0.8999999762 0.8999999762
 d  1
 Ns  0
 illum 2
-map_Kd ShenzongDiff.jpg
+map_Kd shenzongdiffuse.jpg
+map_Ks shenzongspecular.jpg
+map_Ke shenzongglow.jpg
+map_Ka shenzongdmg.jpg
 #
 # EOF
